@@ -1,48 +1,91 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from "../images/tnt-logo.svg"
+
+import Paul from "../images/paul.jpg"
+import Eamo from "../images/eamo.jpg"
 ---
 <Layout title="This Next Thing">
-	<main class="md:flex leading-0">
+	<div class="md:flex justify-center leading-0">
 		<aside>
 			<img src={Logo} alt="This Next Thing"/>
 		</aside>
-		<section id="what" class="tick">
-			<h2>What?</h2>
-			<p>A journey for curious minds</p>
-		</section>
 
-		<section id="who" class="tock">
-			<h2>Who?</h2>
-			<p>Paul & Eamo</p>
-		</section>
+		<main class="md:my-16">
+			<section id="what" class="tick">
+				<h2>What?</h2>
+				<p>
+					This Next Thing is a journey for curious minds and lovers of creativity. We will venture into the Swiss Alps for 2 days in June 2023.
+				</p>
 
-		<section id="when" class="tick">
-			<h2>When?</h2>
-			<p>June 25–28, 2023</p>
-		</section>
+				<p>
+					<a class="font-bold" href="https://en.wikipedia.org/wiki/Thing_(assembly)#Norway" target="_new">“Thing”</a> in its original sense was the gathering of people for lawmaking, socialising and trade. This Next Thing will gather interesting and interested people, celebrating our relationships with the world, and looking forward to what that relationship should be.
+				</p>
+			</section>
 
-		<section id="where" class="tock">
-			<h2>Where?</h2>
-			<p>Pontresina, Switzerland</p>
-		</section>
+			<section id="who" class="tock pb-8">
+				<h2>Who?</h2>
+				<div class="flex items-center justify-center gap-4">
+					<div class="flex">
+						<div class="flex flex-col gap-4 items-center justify-center">
+							<img src={Eamo} class="rounded-full w-64" />
+							<strong>Eamon Leonard</strong>
+						</div>
 
-		<section id="why" class="tick">
-			<h2>Why?</h2>
-			<p>Because</p>
-		</section>
+						<p>
+							Eamon Leonard is the founder of Broadstone VC.
+						</p>
+					</div>
 
-		<section class="p-4 flex items-center justify-center">
-			<a href="#" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">Get Tickets</a>
-		</section>
+					<div class="flex">
+						<div class="flex flex-col gap-4 items-center justify-center">
+							<img src={Paul} class="rounded-full w-64" />
+							<strong>Paul Campbell</strong>
+						</div>
+
+						<p>
+							Paul is the co-founder and CEO of Team Tito.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="when" class="tick">
+				<h2>When?</h2>
+				<p>June 25–28, 2023</p>
+
+				<h3>June 25</h3>
+				<p>Start in Innsbruck, Milan or Zürich</p>
+			</section>
+
+			<section id="where" class="tock">
+				<h2>Where?</h2>
+
+				<h3>June 25</h3>
+				<p>The unconference will take place in the centre of each starter city.</p>
+
+				<h3>June 26–28</h3>
+				<p>The conference itself will take place in Pontresina, in the Eastern Swiss Alps.</p>
+			</section>
+
+			<section id="why" class="tick">
+				<h2>Why?</h2>
+				<p>Because</p>
+			</section>
+
+			<section class="p-4 flex items-center justify-center">
+				<a href="#" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">Get your tickets</a>
+			</section>
+		</main>
 
 
-	</main>
+	</div>
 </Layout>
 
 <style>
 	p { margin-bottom: 2rem }
 	h2 { @apply font-bold text-[1.5rem]  }
+	h3 { @apply font-medium text-[1.2rem]  }
 	h4 { font-weight: bold }
 
 	aside { @apply w-full md:w-[26rem] border-b md:border-b-0 md:border-r border-white p-8 }
@@ -55,6 +98,10 @@ import Logo from "../images/tnt-logo.svg"
 	 }
 
 	.tock { 
-		@apply bg-world-blue mr-4 text-royal-blue;
+		@apply bg-royal-blue mr-4 text-white;
 	 }
+
+	.tock h2, .tock strong {
+		@apply text-light-blue
+	}
 </style>
