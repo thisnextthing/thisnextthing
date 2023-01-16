@@ -46,5 +46,5 @@
 
 <script setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { Bars4Icon } from '@heroicons/vue/20/solid'
+import { Bars4Icon } from '@heroicons/vue/20/solid/index.js'
 </script>
