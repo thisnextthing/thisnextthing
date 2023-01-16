@@ -1,6 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Logo from "../images/tnt-logo.svg"
 ---
 <Layout title="This Next Thing">
-	<h1>This<br>Next<br>Thing</h1>
+	<main class="md:flex leading-0">
+		<aside>
+			<img src={Logo} alt="This Next Thing"/>
+		</aside>
+		<section id="what" class="tick">
+			<h2>What?</h2>
+			<p>A journey for curious minds</p>
+		</section>
+
+		<section id="who" class="tock">
+			<h2>Who?</h2>
+			<p>Paul & Eamo</p>
+		</section>
+
+		<section id="when" class="tick">
+			<h2>When?</h2>
+			<p>June 25–28, 2023</p>
+		</section>
+
+		<section id="where" class="tock">
+			<h2>Where?</h2>
+			<p>Pontresina, Switzerland</p>
+		</section>
+
+		<section id="why" class="tick">
+			<h2>Why?</h2>
+			<p>Because</p>
+		</section>
+
+		<section class="p-4 flex items-center justify-center">
+			<a href="#" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">Get Tickets</a>
+		</section>
+
+
+	</main>
 </Layout>
+
+<style>
+	p { margin-bottom: 2rem }
+	h2 { @apply font-bold text-[1.5rem]  }
+	h4 { font-weight: bold }
+
+	aside { @apply w-full md:w-[26rem] border-b md:border-b-0 md:border-r border-white p-8 }
+	section { @apply p-4; max-width: 80ch }
+
+	section.tick, section.tock { @apply -mt-4  }
+
+	.tick { 
+		@apply bg-light-blue ml-4 text-royal-blue;
+	 }
+
+	.tock { 
+		@apply bg-world-blue mr-4 text-royal-blue;
+	 }
+</style>
