@@ -23,7 +23,7 @@ import Eamo from "../images/eamo.jpg"
 				</p>
 			</section>
 
-			<section id="who" class="tock pb-8">
+			<section id="who" class="tock pb-8 md:pb-16">
 				<h2>Who?</h2>
 				<div class="flex items-center justify-center gap-4">
 					<div class="flex">
@@ -83,22 +83,22 @@ import Eamo from "../images/eamo.jpg"
 </Layout>
 
 <style>
-	p { margin-bottom: 2rem }
+	p { @apply mb-8 }
 	h2 { @apply font-bold text-[1.5rem]  }
 	h3 { @apply font-medium text-[1.2rem]  }
 	h4 { font-weight: bold }
 
 	aside { @apply w-full md:w-[26rem] border-b md:border-b-0 md:border-r border-white p-8 }
-	section { @apply p-4; max-width: 80ch }
+	section { @apply p-4 md:p-8; max-width: 80ch }
 
-	section.tick, section.tock { @apply -mt-4  }
+	section.tick, section.tock { @apply -mt-4 md:-mt-8  }
 
 	.tick { 
-		@apply bg-light-blue ml-4 text-royal-blue;
+		@apply bg-light-blue ml-4 md:ml-8 text-royal-blue;
 	 }
 
 	.tock { 
-		@apply bg-royal-blue mr-4 text-white;
+		@apply bg-royal-blue mr-4 md:mr-8 text-white;
 	 }
 
 	.tock h2, .tock strong {
