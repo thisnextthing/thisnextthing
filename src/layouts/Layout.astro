@@ -22,18 +22,16 @@ import MainMenu from "../components/MainMenu.vue"
 		<meta name="description" content="The spiritual successor to Funconf">
 		<script src="https://js.tito.io/v2" async></script>
 	</head>
-	<body>
+	<body class="bg-cover bg-fixed">
 		<slot />
 	</body>
 </html>
 
 <style is:global define:vars={{ contours }}>
-	html {
+	body {
 
 		color: #F6F6F6;
 
 		background-image: url(/src/images/contours.svg);
-		background-size: cover;
-		background-repeat: no-repeat;
 	}
 </style>
