@@ -68,7 +68,7 @@ import Eamo from "../images/eamo.jpg"
 						<div class="flex flex-1 gap-4">
 							<div class="flex flex-col gap-4 items-center justify-start">
 								<img src={Eamo} class="rounded-full w-64" />
-								<strong class="text-center">Eamon Leonard</strong>
+								<a href="https://www.linkedin.com/in/eamonleonard/" class="font-bold text-center">Eamon Leonard</a>
 							</div>
 
 							<p>
@@ -79,7 +79,7 @@ import Eamo from "../images/eamo.jpg"
 						<div class="flex flex-1 gap-4">
 							<div class="flex flex-col gap-4 items-center justify-start">
 								<img src={Paul} class="rounded-full w-64" />
-								<strong class="text-center">Paul Campbell</strong>
+								<a href="https://www.linkedin.com/in/paulcampbell-tito/" class="font-bold text-center">Paul Campbell</a>
 							</div>
 
 							<p>
@@ -180,7 +180,11 @@ import Eamo from "../images/eamo.jpg"
 		@apply bg-royal-blue mr-4 md:mr-8 text-white rounded-r-xl;
 	 }
 
-	.tock h2, .tock strong {
+	.tock h2, .tock a {
 		@apply text-light-blue
+	}
+
+	.tock a:hover {
+		@apply text-blue-100
 	}
 </style>
