@@ -6,6 +6,7 @@ export interface Props {
 import contours from "../images/contours.svg"
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
+import Flux from '../images/flux.svg';
 ---
 
 <!DOCTYPE html>
@@ -13,8 +14,7 @@ import MainMenu from "../components/MainMenu.vue"
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧨</text></svg>">
+		<link rel="icon" type="image/svg+xml" href={Flux} />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
