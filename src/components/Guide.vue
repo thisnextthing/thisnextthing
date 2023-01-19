@@ -236,7 +236,7 @@
 
         <p>Because we don’t want to assume that you want to return to your starter city, and because of the option to stay an extra night, we will leave onward travel up to you.</p>
 
-        <p>There is a train station in Pontresina, and you can book tickets on the <a href="https://www.sbb.ch" class="font-bold">SBB website</a>. Depending on where you are headed, you could also rent a car, get a taxi. There is also a <a href="https://www.engadin-airport.ch" class="font-bold" target="_new">small airport</a> 10 minutes drive away, and it may be possible to pool resources to get a flight.</p>
+        <p>There is a train station in Pontresina, and you can book tickets on the <a href="https://www.sbb.ch" class="font-bold">SBB website</a>. Depending on where you are headed, you could also rent a car or get a taxi. There is also a <a href="https://www.engadin-airport.ch" class="font-bold" target="_new">small airport</a> 10 minutes drive away, and it may be possible to pool resources to get a flight.</p>
       </SectionContent>
     </TickTockSection>
   </template>
