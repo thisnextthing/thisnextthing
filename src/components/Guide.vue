@@ -10,9 +10,11 @@
       <h3 class="font-medium text-[1.2rem]">First, choose your starter city:</h3>
 
       <ul>
-        <input type="hidden" name="starterCity" v-model="starter" />
         <li v-for="city in cities">
-          <label><input type="radio" name="starterCity" @click="starterCity = city" :value="city"> {{city}}</label>
+          <label>
+            <input type="radio" name="starterCity" v-model="starterCity" @click="starterCity = city" :value="city">
+            {{city}}
+          </label>
         </li>
       </ul>
     </SectionContent>
