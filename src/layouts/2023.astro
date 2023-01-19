@@ -1,0 +1,57 @@
+---
+export interface Props {
+  id: String,
+  type: String
+}
+
+import Logo from "../images/tnt-logo.svg"
+
+import contours from "../images/contours.svg"
+const { title } = Astro.props;
+import MainMenu from "../components/MainMenu.vue"
+import Flux from '../images/flux.svg';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧨</text></svg>">
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{title}</title>
+    <meta name="description" content="The spiritual successor to Funconf">
+    <script src="https://js.tito.io/v2" async></script>
+  </head>
+  <body class="bg-cover bg-fixed text-royal-blue">
+    <div class="md:flex justify-center leading-0">
+      <aside class="w-full md:w-[26rem] p-8">
+        <img src={Logo} alt="This Next Thing" class="md:sticky md:top-0 md:-rotate-3"/>
+      </aside>
+
+      <main class="md:my-32">
+        <slot />
+
+        <footer class="flex items-center gap-4 justify-center mt-16">
+          <a class="text-blue-500" href="/2023">Home</a>
+          <img src={Flux} class="w-6"/>
+          <a class="text-blue-500" href="/2023/questions">Questions</a>
+          <img src={Flux} class="w-6"/>
+          <a class="text-blue-500" href="/2023/guide">Booking guide</a>
+        </footer>
+      </main>
+
+    </div>
+  </body>
+</html>
+
+<style is:global define:vars={{ contours }}>
+  body {
+    background-image: url(/src/images/contours.svg);
+  }
+
+  p { margin-bottom: 1rem }
+</style>

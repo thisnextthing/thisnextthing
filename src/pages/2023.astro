@@ -1,209 +1,173 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Logo from "../images/tnt-logo.svg"
+import Layout from '../layouts/2023.astro';
 
 import Kronenhof from "../images/kronenhof.jpg"
 import KronenhofWide from "../images/kronenhof-wide.jpg"
 import Paul from "../images/paul.jpg"
 import Eamo from "../images/eamo.jpg"
+
+import TickTockSection from "../components/TickTockSection.astro"
+import SectionContent from "../components/SectionContent.astro"
+import SectionHeader from "../components/SectionHeader.astro"
+import SectionSubheader from "../components/SectionSubheader.astro"
 ---
-<Layout title="This Next Thing">
-	<div class="md:flex justify-center leading-0">
-		<aside>
-			<img src={Logo} alt="This Next Thing" class="md:sticky md:top-0 md:-rotate-3"/>
-		</aside>
-
-		<main class="md:my-32">
-			<div class="pb-16 flex flex-col gap-2 items-center justify-center text-royal-blue">
-				<h1 class="text-center">A journey for the curious mind</h1>
-				<p class="text-lg">Pontresina, Switzerland, June 25–28, 2023</p>
-			</div>
-			<section id="what" class="tick">
-				<img src={Kronenhof}/>
-				<div class="content">
-					<h2>What?</h2>
-					<p>
-						This Next Thing is an event for tech folks. Starting on June 25th, guests will choose their starting point: Zürich, Innsbruck or Milan. A local unconference will happen in the starter city, before departing the morning of the 26th toward Pontresina in the Eastern Swiss Alps.
-					</p>
-
-					<div class="mb-4 md:mb-8">
-						<p class="mb-0">
-							The event is in 3 parts:
-						</p>
-
-						<ul class="list-disc list-inside">
-							<li>An <strong>unconference</strong> day, in your choice of starter city: Zürich, Innsbruck or Milan.</li>
-							<li>A <strong>travel</strong> day, from your starter city up into The Alps.</li>
-							<li>A <strong>fete</strong> day of talks, workshops & social time.</li>
-						</ul>
-
-						<p>An optional further <strong>wind-down</strong> day is at your discretion, not officially part of the show.</p>
-					</div>
-
-					<div class="mb-4 md:mb-8">
-						<p class="mb-0">Tickets include:</p>
-
-						<ul class="list-disc list-inside">
-							<li>Dinner <strong>days one, two and three</strong></li>
-							<li>Lunch <strong>days two and three</strong></li>
-							<li>Breakfast <strong>days two, three and four</strong></li>
-							<li>One-way <strong>transport</strong> to Pontresina.</li>
-							<li>Accommodation <strong>days two and three</strong> in Pontresina</li>
-						</ul>
-					</div>
-
-					<p>
-						<a class="font-bold" href="https://en.wikipedia.org/wiki/Thing_(assembly)#Norway" target="_new">“Thing”</a> in its original sense was the gathering of people for lawmaking, socialising and trade. This Next Thing will gather interesting and interested people, celebrating our relationships with the world, and exploring how those relationships should evolve.
-					</p>
-				</div>
-			</section>
-
-			<section id="who" class="tock pb-4">
-				<div class="content">
-					<h2>Who?</h2>
-					<p>
-						"This Next Thing" is the spiritual successor to <a href="http://2012.funconf.com" target="_new">Funconf</a>, a series of conferences that featured busses, trains, castles, helicopters and an island in Ireland. Funconf was created by Paul and Eamo.
-					</p>
-					<div class="flex flex-col md:flex-row items-start justify-center gap-4 md:gap-8">
-						<div class="flex flex-1 gap-4">
-							<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
-								<img src={Eamo} class="rounded-full" />
-								<a href="https://www.linkedin.com/in/eamonleonard/" class="font-bold text-center">Eamon Leonard</a>
-							</div>
-
-							<p class="flex-1">
-								Eamon Leonard is the founder of Broadstone VC, a pre-seed investment firm based in Dublin. Eamo previously built and sold Orchestra, a PHP PaaS, and has made significant contributions to supporting the tech scene in Ireland.
-							</p>
-						</div>
-
-						<div class="flex flex-1 gap-4">
-							<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
-								<img src={Paul} class="rounded-full" />
-								<a href="https://www.linkedin.com/in/paulcampbell-tito/" class="font-bold text-center">Paul Campbell</a>
-							</div>
-
-							<p class="flex-1">
-								Paul is the co-founder and CEO of Team Tito. Paul presides over the making of Tito, an app for selling tickets online, and Vito, an app for building online communities. Paul also created Úll, a series of conferences inspired by Apple.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="when" class="tick">
-				<div class="content">
-					<h2>When?</h2>
-					<p>Sunday, June 25–Wednesday June 27, 2023</p>
-
-					<h3>Sunday, June 25 - Unconf</h3>
-					<p>
-						Start in Innsbruck, Milan or Zürich. In each of the starter cities will be an unconference where you will mix with a third of the whole group. The unconf will offer guests the opportunity to speak, and will be convened by a local host.
-					</p>
-
-					<h3>Monday, June 26 - Travel, Check-in and Chat</h3>
-					<p>
-						Travel day. Depart your starter city not-too-early, not-too-late, for a trip with your new friends. A 3–4 hour ride first toward The Alps, and then up and up into them, towards Pontresina. Check-in to your hotel, then relax and unwind for a few hours before the evening session kicks off.
-					</p>
-
-					<h3>Tuesday, June 27 - This Next Thing</h3>
-
-					<div class="mb-4 md:mb-8">
-						<p class="mb-0">The main day. Like many things at this event, the day will be divided into three. Around and between the main sessions there will be opportunities and spaces to hang out, go for walks, do yoga, or just enjoy the summer Alpine setting.</p>
-
-						<ul class="list-disc list-inside">
-							<li>The <strong>morning session</strong> will take place in the convention centre and offer presentations with the whole group.</li>
-
-							<li>In <strong>the afternoon</strong> we will spread out throughout the whole of the Kronenhof, where you will be invited to attend a series of workshops and conversations.</li>
-
-							<li>Come <strong>evening</strong>, a grand banquet will top off the day, and we won’t be able to resist an after-dinner speech or two.</li>
-						</ul>
-					</div>
-
-					<h3>Wednesday, June 27 - Goodbyes</h3>
-					<p>
-						Time to depart, or optionally stay another night in Pontresina to unwind. One last breakfast as a group, and the official run-of-events is done.
-					</p>
-				</div>
-			</section>
-
-			<section id="where" class="tock">
-				<img src={KronenhofWide}/>
-				<div class="content">
-					<h2>Where?</h2>
-
-					<h3>June 25</h3>
-					<p>The unconference will take place in the centre of each starter city.</p>
-
-					<h3>June 26–28</h3>
-					<p>
-						The venue is the <a href="https://www.kronenhof.com/en/" class="font-bold">Grand Hotel Kronenhof</a>, <a href="https://www.kronenhof.com/en/hotel/awards/" target="_top">one of the most highly-rated hotels</a> in the world. Grand Hotel Kronenof is in the town of Pontresina, in the Eastern Swiss Alps.
-					</p>
-
-					<p>
-						We will also host two sessions in the nearby <a href="https://www.saratz.ch/en/experience/convention-and-event-centre-by-saratz-pontresina" class="font-bold">Pontresina convention centre</a>.
-					</p>
-				</div>
-			</section>
-
-			<section id="why" class="tick">
-				<div class="content">
-					<h2>Why?</h2>
-					<p>
-						Because we believe that events like this should exist. Events, conferences, gatherings are an opportunity to learn, empower oneself and to be truly inspired, more efficiently than any other media.
-					</p>
-					<p>
-						Further: we think events should spark serendipity. They should be full of little moments and shared experiences that create meaningful relationships.
-					</p>
-				</div>
-			</section>
-
-			<section class="p-4 flex flex-col gap-4 items-center justify-center">
-				
-				<h2>Get your tickets:</h2>
-
-				<div class="flex flex-col md:flex-row gap-4 items-center justify-center">
-
-					<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-zuerich,plus-one-zuerich,supporter-zuerich,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇨🇭 Start in Zürich</a>
-
-					<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-milan,plus-one-milan,supporter-milan,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇮🇹 Start in Milan</a>
-
-					<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-innsbruck,plus-one-innsbruck,supporter-innsbruck,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇦🇹 Start in Innsbruck</a>
-				</div>
-			</section>
-		</main>
-
-
+<Layout title="This Next Thing 2023">
+	<div class="pb-16 flex flex-col gap-2 items-center justify-center text-royal-blue">
+		<h1 class="text-center font-bold text-[3rem]">A journey for the curious mind</h1>
+		<p class="text-lg">Pontresina, Switzerland, June 25–28, 2023</p>
 	</div>
+	<TickTockSection id="what" type="tick">
+		<img src={Kronenhof}/>
+		<SectionContent>
+			<SectionHeader>What?</SectionHeader>
+			<p>
+				This Next Thing is an event for tech folks. Starting on June 25th, guests will choose their starting point: Zürich, Innsbruck or Milan. A local unconference will happen in the starter city, before departing the morning of the 26th toward Pontresina in the Eastern Swiss Alps.
+			</p>
+
+			<div class="mb-4 md:mb-8">
+				<p class="mb-0">
+					The event is in 3 parts:
+				</p>
+
+				<ul class="list-disc list-outside ml-8">
+					<li>An <strong>unconference</strong> day, in your choice of starter city: Zürich, Innsbruck or Milan.</li>
+					<li>A <strong>travel</strong> day, from your starter city up into The Alps.</li>
+					<li>A <strong>fete</strong> day of talks, workshops & social time.</li>
+				</ul>
+
+				<p>An optional further <strong>wind-down</strong> day is at your discretion, not officially part of the show.</p>
+			</div>
+
+			<div class="mb-4 md:mb-8">
+				<p class="mb-0">Tickets include:</p>
+
+				<ul class="list-disc list-outside ml-8">
+					<li>Dinner <strong>days one, two and three</strong></li>
+					<li>Lunch <strong>days two and three</strong></li>
+					<li>Breakfast <strong>days two, three and four</strong></li>
+					<li>One-way <strong>transport</strong> to Pontresina.</li>
+					<li>Accommodation <strong>days two and three</strong> in Pontresina</li>
+				</ul>
+			</div>
+
+			<p>
+				<a class="font-bold" href="https://en.wikipedia.org/wiki/Thing_(assembly)#Norway" target="_new">“Thing”</a> in its original sense was the gathering of people for lawmaking, socialising and trade. This Next Thing will gather interesting and interested people, celebrating our relationships with the world, and exploring how those relationships should evolve.
+			</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="who" type="tock" class="pb-4">
+		<SectionContent>
+			<SectionHeader>Who?</SectionHeader>
+			<p>
+				"This Next Thing" is the spiritual successor to <a href="http://2012.funconf.com" target="_new">Funconf</a>, a series of conferences that featured busses, trains, castles, helicopters and an island in Ireland. Funconf was created by Paul and Eamo.
+			</p>
+			<div class="flex flex-col md:flex-row items-start justify-center gap-4 md:gap-8">
+				<div class="flex flex-1 gap-4">
+					<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+						<img src={Eamo} class="rounded-full" />
+						<a href="https://www.linkedin.com/in/eamonleonard/" class="font-bold text-center">Eamon Leonard</a>
+					</div>
+
+					<p class="flex-1">
+						Eamon Leonard is the founder of Broadstone VC, a pre-seed investment firm based in Dublin. Eamo previously built and sold Orchestra, a PHP PaaS, and has made significant contributions to supporting the tech scene in Ireland.
+					</p>
+				</div>
+
+				<div class="flex flex-1 gap-4">
+					<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+						<img src={Paul} class="rounded-full" />
+						<a href="https://www.linkedin.com/in/paulcampbell-tito/" class="font-bold text-center">Paul Campbell</a>
+					</div>
+
+					<p class="flex-1">
+						Paul is the co-founder and CEO of Team Tito. Paul presides over the making of Tito, an app for selling tickets online, and Vito, an app for building online communities. Paul also created Úll, a series of conferences inspired by Apple.
+					</p>
+				</div>
+			</div>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="when" type="tick">
+		<SectionContent>
+			<SectionHeader>When?</SectionHeader>
+			<p>Sunday, June 25–Wednesday June 27, 2023</p>
+
+			<SectionSubheader>Sunday, June 25 - Unconf</SectionSubheader>
+			<p>
+				Start in Innsbruck, Milan or Zürich. In each of the starter cities will be an unconference where you will mix with a third of the whole group. The unconf will offer guests the opportunity to speak, and will be convened by a local host.
+			</p>
+
+			<SectionSubheader>Monday, June 26 - Travel, Check-in and Chat</SectionSubheader>
+			<p>
+				Travel day. Depart your starter city not-too-early, not-too-late, for a trip with your new friends. A 3–4 hour ride first toward The Alps, and then up and up into them, towards Pontresina. Check-in to your hotel, then relax and unwind for a few hours before the evening session kicks off.
+			</p>
+
+			<SectionSubheader>Tuesday, June 27 - This Next Thing</SectionSubheader>
+
+			<div class="mb-4 md:mb-8">
+				<p>The main day. Like many things at this event, the day will be divided into three. Around and between the main sessions there will be opportunities and spaces to hang out, go for walks, do yoga, or just enjoy the summer Alpine setting.</p>
+
+				<ul class="list-disc list-outside ml-8">
+					<li>The <strong>morning session</strong> will take place in the convention centre and offer presentations with the whole group.</li>
+
+					<li>In <strong>the afternoon</strong> we will spread out throughout the whole of the Kronenhof, where you will be invited to attend a series of workshops and conversations.</li>
+
+					<li>Come <strong>evening</strong>, a grand banquet will top off the day, and we won’t be able to resist an after-dinner speech or two.</li>
+				</ul>
+			</div>
+
+			<SectionSubheader>Wednesday, June 27 - Goodbyes</SectionSubheader>
+			<p>
+				Time to depart, or optionally stay another night in Pontresina to unwind. One last breakfast as a group, and the official run-of-events is done.
+			</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="where" type="tock">
+		<img src={KronenhofWide}/>
+		<SectionContent>
+			<SectionHeader>Where?</SectionHeader>
+
+			<SectionSubheader>June 25</SectionSubheader>
+			<p>The unconference will take place in the centre of each starter city.</p>
+
+			<SectionSubheader>June 26–28</SectionSubheader>
+			<p>
+				The venue is the <a href="https://www.kronenhof.com/en/" class="font-bold">Grand Hotel Kronenhof</a>, <a href="https://www.kronenhof.com/en/hotel/awards/" target="_top">one of the most highly-rated hotels</a> in the world. Grand Hotel Kronenof is in the town of Pontresina, in the Eastern Swiss Alps.
+			</p>
+
+			<p>
+				We will also host two sessions in the nearby <a href="https://www.saratz.ch/en/experience/convention-and-event-centre-by-saratz-pontresina" class="font-bold">Pontresina convention centre</a>.
+			</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="why" type="tick">
+		<SectionContent>
+			<SectionHeader>Why?</SectionHeader>
+			<p>
+				Because we believe that events like this should exist. Events, conferences, gatherings are an opportunity to learn, empower oneself and to be truly inspired, more efficiently than any other media.
+			</p>
+			<p>
+				Further: we think events should spark serendipity. They should be full of little moments and shared experiences that create meaningful relationships.
+			</p>
+
+			<p>You can read more on our <a href="/2023/questions" class="font-bold">Questions</a> page.</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<section class="p-4 flex flex-col gap-4 items-center justify-center">
+		
+		<SectionHeader>Get your tickets:</SectionHeader>
+
+		<div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+
+			<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-zuerich,plus-one-zuerich,supporter-zuerich,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇨🇭 Start in Zürich</a>
+
+			<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-milan,plus-one-milan,supporter-milan,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇮🇹 Start in Milan</a>
+
+			<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-innsbruck,plus-one-innsbruck,supporter-innsbruck,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇦🇹 Start in Innsbruck</a>
+		</div>
+	</section>
 </Layout>
-
-<style>
-	body { @apply text-royal-blue }
-	p { @apply mb-8 }
-	h1 { @apply font-bold text-[3rem] }
-	h2 { @apply font-bold text-[1.5rem] mb-2 }
-	h3 { @apply font-medium text-[1.2rem]  }
-	h4 { font-weight: bold }
-
-	aside { @apply w-full md:w-[26rem] p-8 }
-	section {  max-width: 80ch }
-
-	section > .content { @apply p-4 md:p-8; }
-
-	section.tick, section.tock { @apply bg-opacity-80 -mt-4 md:-mt-8 md:rounded-xl overflow-hidden  }
-
-	.tick { 
-		@apply bg-light-blue md:ml-8 text-royal-blue md:rounded-l-xl md:rotate-1;
-	 }
-
-	.tock { 
-		@apply bg-royal-blue md:mr-8 text-white md:rounded-r-xl md:-rotate-1;
-	}
-
-	.tock h2, .tock a {
-		@apply text-light-blue
-	}
-
-	.tock a:hover {
-		@apply text-blue-100
-	}
-</style>
