@@ -57,7 +57,7 @@
       </li>
 
       <li>
-        Arrange your onward transportation. There is a train station in Pontresina, and you can book tickekts on the <a href="https://www.sbb.ch" class="font-bold">SBB website</a>. Depending on where you are headed, you could also rent a car, get a taxi. There is also a <a href="https://www.engadin-airport.ch" class="font-bold" target="_new">small airport</a> 10 minutes drive away, and it may be possible to pool resources to get a flight.
+        Arrange your onward transportation. There is a train station in Pontresina, and you can book tickets on the <a href="https://www.sbb.ch" class="font-bold">SBB website</a>. Depending on where you are headed, you could also rent a car, get a taxi. There is also a <a href="https://www.engadin-airport.ch" class="font-bold" target="_new">small airport</a> 10 minutes drive away, and it may be possible to pool resources to get a flight.
       </li>
     </ul>
   </p>
