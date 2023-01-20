@@ -69,31 +69,14 @@
           Sunday, June 25 - Unconf
         </SectionSubheader>
         <ul class="mb-4 list-outside ml-4">
-          <li :class="{
-            'opacity-75': checked.includes('inbound-flight')
-          }">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('inbound-flight')}">
-              <input type="checkbox" v-model="checked" value="inbound-flight">
-              ✈️ Arrange transport to {{cityEmoji}} {{starterCity}}, {{country}}
-            </label>
-            <br>
-            <em class="ml-4">Arrive no later than the afternoon of Sunday, June 25</em>
-          </li>
+          <GuideCheckbox item="inbound-flight" v-model="checked" hint="Arrive no later than the afternoon of Sunday, June 25">
+            ✈️ Arrange transport to {{cityEmoji}} {{starterCity}}, {{country}}
+          </GuideCheckbox>
 
-          <li :class="{
-            'opacity-75': checked.includes('day-zero-accommodation')
-          }">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-zero-accommodation')}">
-              <input type="checkbox" v-model="checked" value="day-zero-accommodation">
-              🛏️ Arrange accommodation in {{cityEmoji}} {{starterCity}}
-            </label>
-            <br>
-            <em class="ml-4">For at least the night of Sunday, June 25</em>
-          </li>
+          <GuideCheckbox item="day-zero-accommodation" v-model="checked" hint="For at least the night of Sunday, June 25">
+            🛏️ Arrange accommodation in {{cityEmoji}} {{starterCity}}
+          </GuideCheckbox>
+          
         </ul>
 
         <SectionSubheader>
@@ -101,18 +84,10 @@
           Monday, June 26 - Travel
         </SectionSubheader>
         <ul class="mb-4 list-outside ml-4">
-          <li :class="{
-            'opacity-75': checked.includes('day-one-breakfast')
-          }">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-one-breakfast')}">
-              <input type="checkbox" v-model="checked" value="day-one-breakfast">
-              🥣 Breakfast in {{cityEmoji}} {{starterCity}}
-            </label>
-            <br>
-            <em class="ml-4">For at least the evening Sunday, June 25 (obviously you can arrive earlier at your leisure)</em>
-          </li>
+          <GuideCheckbox item="day-one-breakfast" v-model="checked" hint="For at least the evening Sunday, June 25 (obviously you can arrive earlier at your leisure)">
+            🥣 Breakfast in {{cityEmoji}} {{starterCity}}
+          </GuideCheckbox>
+          
 
           <li :class="{
             'opacity-75': checked.includes('day-one-transport')
@@ -245,12 +220,13 @@
 </template>
 
 <script>
+import GuideCheckbox from "../components/GuideCheckbox.vue"
 import TickTockSection from "../components/TickTockSection.vue"
 import SectionContent from "../components/SectionContent.vue"
 import SectionSubheader from "../components/SectionSubheader.vue"
 
 export default {
-  components: {SectionContent, SectionSubheader, TickTockSection},
+  components: {GuideCheckbox, SectionContent, SectionSubheader, TickTockSection},
 
   data(){
     return {
