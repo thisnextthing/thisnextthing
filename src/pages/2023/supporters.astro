@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/2023.astro';
+import TickTockSection from "../../components/TickTockSection.vue"
+import SectionContent from "../../components/SectionContent.vue"
+import SectionHeader from "../../components/SectionHeader.astro"
+import SectionSubheader from "../../components/SectionSubheader.vue"
+---
+<Layout title="This Next Thing 2023 - Supporters">
+  <TickTockSection id="what" type="tick">
+    <SectionContent>
+      <SectionHeader>Supporters</SectionHeader>
+
+      <p>
+        Supporter tickets are a form of micro-level sponsorship for €5k.
+      </p>
+
+      <p>
+        Supporter tickets include a full conference pass and an optional plus one. In addition, you can provide us with a link that we will share with This Next Thing participants, as well as a shout-out in plenary sessions.
+      </p>
+    </SectionContent>
+  </TickTockSection>
+
+  <section class="p-4 flex flex-col gap-4 items-center justify-center">
+    <SectionHeader>Get your supporter ticket:</SectionHeader>
+
+    <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+
+      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=supporter-zuerich,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇨🇭 Start in Zürich</a>
+
+      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=supporter-milan,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇮🇹 Start in Milan</a>
+
+      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=supporter-innsbruck,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇦🇹 Start in Innsbruck</a>
+    </div>
+  </section>
+</Layout>

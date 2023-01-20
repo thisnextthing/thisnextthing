@@ -182,6 +182,19 @@
       </SectionContent>
     </TickTockSection>
   </template>
+
+  <section class="p-4 flex flex-col gap-4 items-center justify-center">
+    <h2 class="font-bold text-[1.5rem] mb-2">Get your tickets:</h2>
+
+    <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+
+      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-zuerich,plus-one-zuerich,supporter-zuerich,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Zürich'">🇨🇭 Start in Zürich</a>
+
+      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-milan,plus-one-milan,supporter-milan,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Milan'">🇮🇹 Start in Milan</a>
+
+      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-innsbruck,plus-one-innsbruck,supporter-innsbruck,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Innsbruck'">🇦🇹 Start in Innsbruck</a>
+    </div>
+  </section>
 </template>
 
 <script>
