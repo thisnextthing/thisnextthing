@@ -9,11 +9,11 @@
 
       <h3 class="font-medium text-[1.2rem]">First, choose your starter city:</h3>
 
-      <ul>
+      <ul class="mb-4 inline-flex gap-8">
         <li v-for="city in cities">
-          <label>
+          <label class="inline-flex items-center gap-2 cursor-pointer">
             <input type="radio" name="starterCity" v-model="starterCity" @click="starterCity = city" :value="city">
-            {{city}}
+            <span :class="{'font-bold': starterCity === city}">{{cityEmojis[city]}} {{city}}</span>
           </label>
         </li>
       </ul>
@@ -25,38 +25,55 @@
       <SectionContent>
         <p>The following is <strong>included</strong> with your ticket:</p>
 
-        <SectionSubheader>
-          <strong class="font-heavy uppercase text-sm text-white">Day Zero</strong>
-          Sunday, June 25 - Unconf
-        </SectionSubheader>
-        <ul class="mb-4 list-disc list-outside ml-8">
-          <li>🪑 Unconference in {{cityEmoji}} {{starterCity}}</li>
-          <li>🍽️ Dinner</li>
-        </ul>
+        <table class="bg-white rounded-lg w-full overflow-hidden text-royal-blue table-fixed mb-4">
+          <thead class="divide-x divide-y border-b">
+            <tr class="divide-x divide-y">
+              <th>Sun<span class="hidden md:inline">, June</span> 25</th>
+              <th>Mon<span class="hidden md:inline">, June</span> 26</th>
+              <th>Tues<span class="hidden md:inline">, June</span> 27</th>
+              <th>Weds<span class="hidden md:inline">, June</span> 28</th>
+            </tr>
+            <tr class="divide-x divide-y">
+              <th class="font-heavy uppercase text-sm">Day Zero</th>
+              <th class="font-heavy uppercase text-sm">Day One</th>
+              <th class="font-heavy uppercase text-sm">Day Two</th>
+              <th class="font-heavy uppercase text-sm">Day Three</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td colspan="2" class="text-center bg-blue-100">🥣 Breakfast</td>
+            </tr>
 
-        <SectionSubheader>
-          <strong class="font-heavy uppercase text-sm text-white">Day One</strong>
-          Monday, June 26 - Travel
-        </SectionSubheader>
-        <ul class="mb-4 list-disc list-outside ml-8">
-          <li>{{transportEmoji}} {{trainOrBus}} from {{starterCity}} to Pontresina</li>
-          <li>🍲 Light lunch</li>
-          <li>🛏️ Accommodation in Pontresina</li>
-          <li>🪑 Early evening conference sessions</li>
-          <li>🍽️ Dinner</li>
-        </ul>
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td class="text-center bg-red-100">{{transportEmoji}} {{trainOrBus}}<span class="hidden md:inline"> from {{cityEmoji}}</span></td>
+              <td class="text-center bg-amber-300" colspan="1">🪑 AM Conf<span class="hidden md:inline">erence</span></td>
+              <td rowspan="5">&nbsp;</td>
+            </tr>
 
-        <SectionSubheader>
-          <strong class="font-heavy uppercase text-sm text-white">Day Two</strong>
-          Tuesday, June 27 - The main day
-        </SectionSubheader>
-        <ul class="mb-4 list-disc list-outside ml-8">
-          <li>🪑 Conference sessions, workshops, round-tables</li>
-          <li>🥣 Breakfast</li>
-          <li>🛏️ Accommodation in Pontresina</li>
-          <li>🍲 Lunch</li>
-          <li>🍽️ Dinner</li>
-        </ul>
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td class="text-center bg-yellow-100" colspan="2">🍲 Lunch</td>
+            </tr>
+
+            <tr class="divide-x divide-y">
+              <td class="text-center bg-amber-100">{{cityEmoji}} Unconf<span class="hidden md:inline">erence</span></td>
+              <td class="text-center bg-amber-300" colspan="2">🪑 PM Conf<span class="hidden md:inline">erence</span></td>
+            </tr>
+
+            <tr class="divide-x divide-y">
+              <td class="text-center bg-gray-100" colspan="3">🍽️ Dinner</td>
+            </tr>
+
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td class="text-center bg-sky-100" colspan="2">🛏️ Hotel</td>
+            </tr>
+          </tbody>
+        </table>
       </SectionContent>
     </TickTockSection>
 
@@ -84,36 +101,17 @@
           Monday, June 26 - Travel
         </SectionSubheader>
         <ul class="mb-4 list-outside ml-4">
-          <GuideCheckbox item="day-one-breakfast" v-model="checked" hint="For at least the evening Sunday, June 25 (obviously you can arrive earlier at your leisure)">
-            🥣 Breakfast in {{cityEmoji}} {{starterCity}}
+          <GuideCheckbox item="day-one-breakfast" v-model="checked">
+            🥣 Get breakfast in {{cityEmoji}} {{starterCity}}
           </GuideCheckbox>
-          
 
-          <li :class="{
-            'opacity-75': checked.includes('day-one-transport')
-          }">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-one-transport')}">
-              <input type="checkbox" v-model="checked" value="day-one-transport">
-              {{transportEmoji}} Make your way to the {{trainOrBus}}
-            </label>
-            <br>
-            <em class="ml-4">We’ll share exact time and location with you</em>
-          </li>
+          <GuideCheckbox item="day-one-transport" v-model="checked" hint="We’ll share exact time and location with you">
+            {{transportEmoji}} Make your way to the {{trainOrBus}}
+          </GuideCheckbox>
 
-          <li :class="{
-            'opacity-75': checked.includes('day-one-views')
-          }">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-one-views')}">
-              <input type="checkbox" v-model="checked" value="day-one-views">
-              🌄 Enjoy the Alpine views and meet some fellow attendees on your journey
-            </label>
-            <br>
-            <em class="ml-4">Don’t forget to look out the windows!</em>
-          </li>
+          <GuideCheckbox item="day-one-views" v-model="checked" hint="Don’t forget to look out the windows!">
+            🌄 Enjoy the Alpine views and meet some fellow attendees on your journey
+          </GuideCheckbox>
         </ul>
 
         <SectionSubheader>
@@ -128,12 +126,12 @@
           <p>
             On the last day, you can choose to stay an optional extra day. It’s not part of the official event, but some of us will stick around just to wind down.
           </p>
-          <label class="inline-flex items-center gap-1 cursor-pointer text-lg">
+          <label class="inline-flex items-center gap-2 cursor-pointer text-lg">
             <input type="radio" v-model="option" :value="false">
             I will depart on Day Three
           </label>
 
-          <label class="inline-flex items-center gap-1 cursor-pointer text-lg">
+          <label class="inline-flex items-center gap-2 cursor-pointer text-lg">
             <input type="radio" v-model="option" :value="true">
             I will stay an extra wind-down night
           </label>
@@ -150,36 +148,13 @@
           </template>
         </SectionSubheader>
         <ul class="mb-4 list-outside ml-4">
-          <li
-            :class="{
-              'opacity-75': checked.includes('day-three-plan')
-            }"
-            v-if="option">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-three-plan')}">
-              <input type="checkbox" v-model="checked" value="day-three-plan">
-              📋 Plan your day
-            </label>
-            <br>
-            <em class="ml-4">
-              You could do nothing, go for walks, relax, hang-out. Whatever you want!
-            </em>
-          </li>
-          <li
-            :class="{
-              'opacity-75': checked.includes('last-day-transport')
-            }"
-            v-else>
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('last-day-transport')}">
-              <input type="checkbox" v-model="checked" value="last-day-transport">
-              🚗🚌🚂✈️ Plan your onward journey.
-            </label>
-            <br>
-            <em class="ml-4">You could return to {{cityEmoji}} {{starterCity}}, or continue your journey elsewhere.</em>
-          </li>
+          <GuideCheckbox v-if="option" item="day-three-plan" v-model="checked" hint="You could do nothing, go for walks, relax, hang-out. Whatever you want!">
+            📋 Plan your day
+          </GuideCheckbox>
+
+          <GuideCheckbox v-else item="last-day-transport" v-model="checked" :hint="`You could return to ${cityEmoji} ${starterCity}, or continue your journey elsewhere.`">
+            🚗🚌🚂✈️ Plan your onward journey.
+          </GuideCheckbox>
         </ul>
 
         <template v-if="option">
@@ -189,19 +164,9 @@
             Au revoir, Auf Wiedersehen, Arrivederci
           </SectionSubheader>
           <ul class="mb-4 list-outside ml-4">
-            <li
-            :class="{
-              'opacity-75': checked.includes('last-day-transport')
-            }">
-              <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('last-day-transport')}">
-                <input type="checkbox" v-model="checked" value="last-day-transport">
-                🚗🚌🚂✈️ Plan your onward journey.
-              </label>
-              <br>
-              <em class="ml-4">You could return to {{cityEmoji}} {{starterCity}}, or continue your journey elsewhere.</em>
-            </li>
+            <GuideCheckbox item="last-day-transport" v-model="checked" :hint="`You could return to ${cityEmoji} ${starterCity}, or continue your journey elsewhere.`">
+              🚗🚌🚂✈️ Plan your onward journey.
+            </GuideCheckbox>
           </ul>
         </template>
       </SectionContent>
@@ -259,6 +224,18 @@ export default {
       return ["Zürich", "Milan", "Innsbruck"]
     },
 
+    cityEmojis(){
+      return {
+        "Innsbruck": "🇦🇹",
+        "Milan": "🇮🇹",
+        "Zürich": "🇨🇭"
+      }
+    },
+
+    cityEmoji(){
+      return this.cityEmojis[this.starterCity]
+    },
+
     country(){
       if(this.starterCity === 'Innsbruck')
       {
@@ -288,21 +265,6 @@ export default {
         return "Bus"
       }
       return "Train"
-    },
-
-    cityEmoji(){
-      if(this.starterCity === 'Innsbruck')
-      {
-        return "🇦🇹"
-      }
-      if(this.starterCity === 'Zürich')
-      {
-        return "🇨🇭"
-      }
-      if(this.starterCity === 'Milan')
-      {
-        return "🇮🇹"
-      }
     }
   }
 }

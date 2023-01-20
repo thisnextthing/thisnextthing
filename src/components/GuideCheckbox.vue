@@ -24,7 +24,7 @@ export default {
   },
 
   watch: {
-    isChecked(){
+    checked(){
       this.$emit("update:modelValue", this.checked)
     }
   }
