@@ -101,36 +101,17 @@
           Monday, June 26 - Travel
         </SectionSubheader>
         <ul class="mb-4 list-outside ml-4">
-          <GuideCheckbox item="day-one-breakfast" v-model="checked" hint="For at least the evening Sunday, June 25 (obviously you can arrive earlier at your leisure)">
-            🥣 Breakfast in {{cityEmoji}} {{starterCity}}
+          <GuideCheckbox item="day-one-breakfast" v-model="checked">
+            🥣 Get breakfast in {{cityEmoji}} {{starterCity}}
           </GuideCheckbox>
-          
 
-          <li :class="{
-            'opacity-75': checked.includes('day-one-transport')
-          }">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-one-transport')}">
-              <input type="checkbox" v-model="checked" value="day-one-transport">
-              {{transportEmoji}} Make your way to the {{trainOrBus}}
-            </label>
-            <br>
-            <em class="ml-4">We’ll share exact time and location with you</em>
-          </li>
+          <GuideCheckbox item="day-one-transport" v-model="checked" hint="We’ll share exact time and location with you">
+            {{transportEmoji}} Make your way to the {{trainOrBus}}
+          </GuideCheckbox>
 
-          <li :class="{
-            'opacity-75': checked.includes('day-one-views')
-          }">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-one-views')}">
-              <input type="checkbox" v-model="checked" value="day-one-views">
-              🌄 Enjoy the Alpine views and meet some fellow attendees on your journey
-            </label>
-            <br>
-            <em class="ml-4">Don’t forget to look out the windows!</em>
-          </li>
+          <GuideCheckbox item="day-one-views" v-model="checked" hint="Don’t forget to look out the windows!">
+            🌄 Enjoy the Alpine views and meet some fellow attendees on your journey
+          </GuideCheckbox>
         </ul>
 
         <SectionSubheader>
@@ -145,12 +126,12 @@
           <p>
             On the last day, you can choose to stay an optional extra day. It’s not part of the official event, but some of us will stick around just to wind down.
           </p>
-          <label class="inline-flex items-center gap-1 cursor-pointer text-lg">
+          <label class="inline-flex items-center gap-2 cursor-pointer text-lg">
             <input type="radio" v-model="option" :value="false">
             I will depart on Day Three
           </label>
 
-          <label class="inline-flex items-center gap-1 cursor-pointer text-lg">
+          <label class="inline-flex items-center gap-2 cursor-pointer text-lg">
             <input type="radio" v-model="option" :value="true">
             I will stay an extra wind-down night
           </label>
@@ -167,36 +148,13 @@
           </template>
         </SectionSubheader>
         <ul class="mb-4 list-outside ml-4">
-          <li
-            :class="{
-              'opacity-75': checked.includes('day-three-plan')
-            }"
-            v-if="option">
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('day-three-plan')}">
-              <input type="checkbox" v-model="checked" value="day-three-plan">
-              📋 Plan your day
-            </label>
-            <br>
-            <em class="ml-4">
-              You could do nothing, go for walks, relax, hang-out. Whatever you want!
-            </em>
-          </li>
-          <li
-            :class="{
-              'opacity-75': checked.includes('last-day-transport')
-            }"
-            v-else>
-            <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('last-day-transport')}">
-              <input type="checkbox" v-model="checked" value="last-day-transport">
-              🚗🚌🚂✈️ Plan your onward journey.
-            </label>
-            <br>
-            <em class="ml-4">You could return to {{cityEmoji}} {{starterCity}}, or continue your journey elsewhere.</em>
-          </li>
+          <GuideCheckbox v-if="option" item="day-three-plan" v-model="checked" hint="You could do nothing, go for walks, relax, hang-out. Whatever you want!">
+            📋 Plan your day
+          </GuideCheckbox>
+
+          <GuideCheckbox v-else item="last-day-transport" v-model="checked" :hint="`You could return to ${cityEmoji} ${starterCity}, or continue your journey elsewhere.`">
+            🚗🚌🚂✈️ Plan your onward journey.
+          </GuideCheckbox>
         </ul>
 
         <template v-if="option">
@@ -206,19 +164,9 @@
             Au revoir, Auf Wiedersehen, Arrivederci
           </SectionSubheader>
           <ul class="mb-4 list-outside ml-4">
-            <li
-            :class="{
-              'opacity-75': checked.includes('last-day-transport')
-            }">
-              <label
-              class="inline-flex items-center gap-1 cursor-pointer text-lg"
-              :class="{'line-through': checked.includes('last-day-transport')}">
-                <input type="checkbox" v-model="checked" value="last-day-transport">
-                🚗🚌🚂✈️ Plan your onward journey.
-              </label>
-              <br>
-              <em class="ml-4">You could return to {{cityEmoji}} {{starterCity}}, or continue your journey elsewhere.</em>
-            </li>
+            <GuideCheckbox item="last-day-transport" v-model="checked" :hint="`You could return to ${cityEmoji} ${starterCity}, or continue your journey elsewhere.`">
+              🚗🚌🚂✈️ Plan your onward journey.
+            </GuideCheckbox>
           </ul>
         </template>
       </SectionContent>
