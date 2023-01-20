@@ -9,11 +9,11 @@
 
       <h3 class="font-medium text-[1.2rem]">First, choose your starter city:</h3>
 
-      <ul class="mb-4">
+      <ul class="mb-4 inline-flex gap-8">
         <li v-for="city in cities">
-          <label>
+          <label class="inline-flex items-center gap-2 cursor-pointer">
             <input type="radio" name="starterCity" v-model="starterCity" @click="starterCity = city" :value="city">
-            <span :class="{'font-bold': starterCity === city}">{{city}}</span>
+            <span :class="{'font-bold': starterCity === city}">{{cityEmojis[city]}} {{city}}</span>
           </label>
         </li>
       </ul>
@@ -49,7 +49,7 @@
 
             <tr class="divide-x divide-y">
               <td>&nbsp;</td>
-              <td class="text-center bg-red-100">{{transportEmoji}} {{trainOrBus}}</td>
+              <td class="text-center bg-red-100">{{transportEmoji}} {{trainOrBus}}<span class="hidden md:inline"> from {{cityEmoji}}</span></td>
               <td class="text-center bg-amber-300" colspan="1">🪑 AM Conf<span class="hidden md:inline">erence</span></td>
               <td rowspan="5">&nbsp;</td>
             </tr>
@@ -276,6 +276,18 @@ export default {
       return ["Zürich", "Milan", "Innsbruck"]
     },
 
+    cityEmojis(){
+      return {
+        "Innsbruck": "🇦🇹",
+        "Milan": "🇮🇹",
+        "Zürich": "🇨🇭"
+      }
+    },
+
+    cityEmoji(){
+      return this.cityEmojis[this.starterCity]
+    },
+
     country(){
       if(this.starterCity === 'Innsbruck')
       {
@@ -305,21 +317,6 @@ export default {
         return "Bus"
       }
       return "Train"
-    },
-
-    cityEmoji(){
-      if(this.starterCity === 'Innsbruck')
-      {
-        return "🇦🇹"
-      }
-      if(this.starterCity === 'Zürich')
-      {
-        return "🇨🇭"
-      }
-      if(this.starterCity === 'Milan')
-      {
-        return "🇮🇹"
-      }
     }
   }
 }
