@@ -118,7 +118,7 @@
 
         <SectionSubheader>
           <strong class="font-heavy uppercase text-sm text-white">Day Two</strong>
-          Tueday, June 27 - The Main day
+          Tuesday, June 27 - The Main day
         </SectionSubheader>
         <p>
           Everything will be taken care of for you on the main day. We’ll let you know closer to the time what you need to do and where you’ll want to be.
