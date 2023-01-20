@@ -9,11 +9,11 @@
 
       <h3 class="font-medium text-[1.2rem]">First, choose your starter city:</h3>
 
-      <ul>
+      <ul class="mb-4">
         <li v-for="city in cities">
           <label>
             <input type="radio" name="starterCity" v-model="starterCity" @click="starterCity = city" :value="city">
-            {{city}}
+            <span :class="{'font-bold': starterCity === city}">{{city}}</span>
           </label>
         </li>
       </ul>
@@ -25,38 +25,55 @@
       <SectionContent>
         <p>The following is <strong>included</strong> with your ticket:</p>
 
-        <SectionSubheader>
-          <strong class="font-heavy uppercase text-sm text-white">Day Zero</strong>
-          Sunday, June 25 - Unconf
-        </SectionSubheader>
-        <ul class="mb-4 list-disc list-outside ml-8">
-          <li>🪑 Unconference in {{cityEmoji}} {{starterCity}}</li>
-          <li>🍽️ Dinner</li>
-        </ul>
+        <table class="bg-white rounded-lg w-full overflow-hidden text-royal-blue table-fixed mb-4">
+          <thead class="divide-x divide-y border-b">
+            <tr class="divide-x divide-y">
+              <th>Sun<span class="hidden md:inline">, June</span> 25</th>
+              <th>Mon<span class="hidden md:inline">, June</span> 26</th>
+              <th>Tues<span class="hidden md:inline">, June</span> 27</th>
+              <th>Weds<span class="hidden md:inline">, June</span> 28</th>
+            </tr>
+            <tr class="divide-x divide-y">
+              <th class="font-heavy uppercase text-sm">Day Zero</th>
+              <th class="font-heavy uppercase text-sm">Day One</th>
+              <th class="font-heavy uppercase text-sm">Day Two</th>
+              <th class="font-heavy uppercase text-sm">Day Three</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td colspan="2" class="text-center bg-blue-100">🥣 Breakfast</td>
+            </tr>
 
-        <SectionSubheader>
-          <strong class="font-heavy uppercase text-sm text-white">Day One</strong>
-          Monday, June 26 - Travel
-        </SectionSubheader>
-        <ul class="mb-4 list-disc list-outside ml-8">
-          <li>{{transportEmoji}} {{trainOrBus}} from {{starterCity}} to Pontresina</li>
-          <li>🍲 Light lunch</li>
-          <li>🛏️ Accommodation in Pontresina</li>
-          <li>🪑 Early evening conference sessions</li>
-          <li>🍽️ Dinner</li>
-        </ul>
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td class="text-center bg-red-100">{{transportEmoji}} {{trainOrBus}}</td>
+              <td class="text-center bg-amber-300" colspan="1">🪑 AM Conf<span class="hidden md:inline">erence</span></td>
+              <td rowspan="5">&nbsp;</td>
+            </tr>
 
-        <SectionSubheader>
-          <strong class="font-heavy uppercase text-sm text-white">Day Two</strong>
-          Tuesday, June 27 - The main day
-        </SectionSubheader>
-        <ul class="mb-4 list-disc list-outside ml-8">
-          <li>🪑 Conference sessions, workshops, round-tables</li>
-          <li>🥣 Breakfast</li>
-          <li>🛏️ Accommodation in Pontresina</li>
-          <li>🍲 Lunch</li>
-          <li>🍽️ Dinner</li>
-        </ul>
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td class="text-center bg-yellow-100" colspan="2">🍲 Lunch</td>
+            </tr>
+
+            <tr class="divide-x divide-y">
+              <td class="text-center bg-amber-100">{{cityEmoji}} Unconf<span class="hidden md:inline">erence</span></td>
+              <td class="text-center bg-amber-300" colspan="2">🪑 PM Conf<span class="hidden md:inline">erence</span></td>
+            </tr>
+
+            <tr class="divide-x divide-y">
+              <td class="text-center bg-gray-100" colspan="3">🍽️ Dinner</td>
+            </tr>
+
+            <tr class="divide-x divide-y">
+              <td>&nbsp;</td>
+              <td class="text-center bg-sky-100" colspan="2">🛏️ Hotel</td>
+            </tr>
+          </tbody>
+        </table>
       </SectionContent>
     </TickTockSection>
 
