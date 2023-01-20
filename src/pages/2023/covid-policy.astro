@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/2023.astro';
+import TickTockSection from "../../components/TickTockSection.vue"
+import SectionContent from "../../components/SectionContent.vue"
+import SectionHeader from "../../components/SectionHeader.astro"
+import SectionSubheader from "../../components/SectionSubheader.vue"
+---
+<Layout title="This Next Thing 2023 - Guide to booking">
+  <TickTockSection id="what" type="tock">
+    <SectionContent>
+      <SectionHeader>Covid-19 Policy</SectionHeader>
+
+      <p>
+        As of writing, there are currently <a href="https://www.bag.admin.ch/bag/en/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov/massnahmen-des-bundes.html#850493620">no national rules in Switzerland</a> in place specific to Covid 19.
+      </p>
+
+      <p>
+        Masking, proof-of-vaccination and/or testing is not mandatory for this event.
+      </p>
+
+      <p>
+        If you develop Covid-19 or other respiratory or viral symptoms while at the event, we would encourage you to take measures to prevent the spread.
+      </p>
+
+      <p>
+        Since this event involves moving and travelling as a group, we cannot recommend it to those who are vulnerable and/or immunocompromised.
+      </p>
+    </SectionContent>
+  </TickTockSection>
+</Layout>
