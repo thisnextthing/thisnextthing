@@ -9,6 +9,8 @@ import Logo from "../images/tnt-logo.svg"
 import contours from "../images/contours.svg"
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
+
+import Favicon from '../images/favicon.png';
 import Flux from '../images/flux.svg';
 ---
 
@@ -17,6 +19,7 @@ import Flux from '../images/flux.svg';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" sizes="any" href={Favicon} />
     <link rel="icon" type="image/svg+xml" href={Flux} />
     <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
