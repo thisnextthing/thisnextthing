@@ -9,6 +9,8 @@ import Logo from "../images/tnt-logo.svg"
 import contours from "../images/contours.svg"
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
+
+import Favicon from '../images/favicon.png';
 import Flux from '../images/flux.svg';
 ---
 
@@ -17,6 +19,7 @@ import Flux from '../images/flux.svg';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" sizes="any" href={Favicon} />
     <link rel="icon" type="image/svg+xml" href={Flux} />
     <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,12 +37,20 @@ import Flux from '../images/flux.svg';
       <main class="md:my-32">
         <slot />
 
-        <footer class="flex items-center gap-4 justify-center mt-16">
-          <a class="text-blue-500" href="/2023">Home</a>
-          <img src={Flux} class="w-6"/>
-          <a class="text-blue-500" href="/2023/questions">Questions</a>
-          <img src={Flux} class="w-6"/>
-          <a class="text-blue-500" href="/2023/guide">Booking guide</a>
+        <footer class="flex flex-col items-center gap-4 justify-center py-16 px-4">
+          <div class="flex items-center gap-4">
+            <a class="text-blue-500" href="/2023">Home</a>
+            <img src={Flux} class="w-6"/>
+            <a class="text-blue-500" href="/2023/questions">Questions</a>
+            <img src={Flux} class="w-6"/>
+            <a class="text-blue-500" href="/2023/guide">Booking guide</a>
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <a class="text-blue-500" href="/2023/code-of-conduct">Code of Conduct</a>
+            <img src={Flux} class="w-6"/>
+            <a class="text-blue-500" href="/2023/policies">Policies: Refunds, Covid-19, Family, Insurance, Privacy</a>
+          </div>
         </footer>
       </main>
 
