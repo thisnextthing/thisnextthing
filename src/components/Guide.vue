@@ -197,15 +197,17 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import GuideCheckbox from "../components/GuideCheckbox.vue"
 import TickTockSection from "../components/TickTockSection.vue"
 import SectionContent from "../components/SectionContent.vue"
 import SectionSubheader from "../components/SectionSubheader.vue"
+</script>
+
+<script>
+
 
 export default {
-  components: {GuideCheckbox, SectionContent, SectionSubheader, TickTockSection},
-
   data(){
     return {
       checked: [],

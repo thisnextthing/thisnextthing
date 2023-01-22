@@ -2,16 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Logo from "../images/tnt-logo.svg"
 
+import MailingListSignup from "../components/MailingListSignup.vue"
+
 import Paul from "../images/paul.jpg"
 import Eamo from "../images/eamo.jpg"
 ---
 <Layout title="This Next Thing">
 	<div class="md:flex justify-center leading-0">
-		<main class="md:my-32">
+		<main>
 			<div class="pb-16 flex flex-col gap-2 items-center justify-center text-royal-blue">
 				<img src={Logo} alt="This Next Thing"/>
 				<h1 class="text-center">A journey for the curious mind</h1>
 				<p class="text-lg">Switzerland, June 25–28, 2023</p>
+				<div>
+					<MailingListSignup client:load />
+				</div>
 			</div>
 		</main>
 	</div>
