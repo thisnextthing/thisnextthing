@@ -6,7 +6,7 @@
             'bg-light-blue bg-opacity-95 bottom-0': !consented
            }">
         <div class="flex flex-col gap-4 p-4 border-b bg-light-blue" :class="{'border-t': !consented}">
-          <h2 for="email" class="block text-md font-light text-center">Sign up for updates</h2>
+          <h2 for="email" class="block text-md font-bold text-center">Sign up for updates</h2>
           <fieldset>
             <legend class="sr-only">Consent to sign up</legend>
             <div class="relative flex items-start">
