@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent.stop="submit" class="rounded overflow-hidden rotate-1 bg-light-blue mt-4">
-    <div class="bg-light-blue flex items-center justify-center relative p-4 transition-all" :class="{'pt-[8rem]': consented}">
+    <div class="bg-light-blue flex items-center justify-center relative p-4 transition-all w-64" :class="{'pt-[8rem]': consented}">
       <div class="absolute top-0 left-0 right-0 flex flex-col gap-4 items-center justify-center transition-all"
            :class="{
             'bg-light-blue bg-opacity-95 bottom-0': !consented
