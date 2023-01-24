@@ -51,6 +51,7 @@ async function submit(){
 
 .tito-register-interest-form input {
   display: block;
+  @apply rounded;
 }
 
 .tito-register-interest-form button {
