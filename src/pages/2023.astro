@@ -8,7 +8,7 @@ import Eamo from "../images/eamo.jpg"
 
 import TickTockSection from "../components/TickTockSection.vue"
 import SectionContent from "../components/SectionContent.vue"
-import SectionHeader from "../components/SectionHeader.astro"
+import SectionHeader from "../components/SectionHeader.vue"
 import SectionSubheader from "../components/SectionSubheader.vue"
 ---
 <Layout title="This Next Thing 2023">
@@ -188,15 +188,8 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 	</TickTockSection>
 
 	<section class="p-4 flex flex-col gap-4 items-center justify-center">
-		<SectionHeader>Get your tickets:</SectionHeader>
-
-		<div class="flex flex-col md:flex-row gap-4 items-center justify-center">
-
-			<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-zuerich,plus-one-zuerich,supporter-zuerich,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇨🇭 Start in Zürich</a>
-
-			<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-milan,plus-one-milan,supporter-milan,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇮🇹 Start in Milan</a>
-
-			<a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-innsbruck,plus-one-innsbruck,supporter-innsbruck,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">🇦🇹 Start in Innsbruck</a>
-		</div>
+		<a href="/2023/booking" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">
+			🎟️ Get your tickets
+		</a>
 	</section>
 </Layout>
