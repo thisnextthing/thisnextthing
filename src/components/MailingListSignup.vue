@@ -1,11 +1,11 @@
 <template>
-  <form @submit.prevent.stop="submit">
-    <div class="bg-white border-b flex items-center justify-center relative mt-4 p-4 transition-all" :class="{'pt-[8rem]': consented}">
-      <div class="absolute top-0 left-0 right-0 rounded flex flex-col gap-4 items-center justify-center transition-all"
+  <form @submit.prevent.stop="submit" class="rounded overflow-hidden rotate-1 bg-light-blue mt-4">
+    <div class="bg-light-blue flex items-center justify-center relative p-4 transition-all" :class="{'pt-[8rem]': consented}">
+      <div class="absolute top-0 left-0 right-0 flex flex-col gap-4 items-center justify-center transition-all"
            :class="{
-            'bg-white bg-opacity-95 bottom-0': !consented
+            'bg-light-blue bg-opacity-95 bottom-0': !consented
            }">
-        <div class="flex flex-col gap-4 bg-white p-4 border-t border-b">
+        <div class="flex flex-col gap-4 p-4 border-b bg-light-blue" :class="{'border-t': !consented}">
           <h2 for="email" class="block text-md font-light text-center">Sign up for updates</h2>
           <fieldset>
             <legend class="sr-only">Consent to sign up</legend>
@@ -37,16 +37,9 @@ const email = ref("")
 const consented = ref(false)
 
 async function submit(){
-  console.log("submitting")
   if(consented)
   {
-    console.log("signing up!")
     const response = await axios.get("https://ti.to/this-next-thing/2023/interested_users/subscribe.json", {email: email})
-    console.log(response)
-  }
-  else
-  {
-    console.log("not consented")
   }
 }
 </script>
@@ -64,6 +57,4 @@ async function submit(){
   display: block;
   @apply bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold
 }
-
-
 </style>
