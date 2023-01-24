@@ -7,16 +7,10 @@
         There’s a lot included with your ticket for This Next Thing, but this is a short guide on what you need to book to get the most out of your trip.
       </p>
 
-      <h3 class="font-medium text-[1.2rem]">First, choose your starter city:</h3>
+      <h3 class="font-medium text-[1.2rem] mb-4">Choose your starter city:</h3>
 
-      <ul class="mb-4 inline-flex gap-8">
-        <li v-for="city in cities">
-          <label class="inline-flex items-center gap-2 cursor-pointer">
-            <input type="radio" name="starterCity" v-model="starterCity" @click="starterCity = city" :value="city">
-            <span :class="{'font-bold': starterCity === city}">{{cityEmojis[city]}} {{city}}</span>
-          </label>
-        </li>
-      </ul>
+      <starter-city-chooser v-model="starterCity" />
+
     </SectionContent>
   </TickTockSection>
 
@@ -26,7 +20,7 @@
         <p>The following is <strong>included</strong> with your ticket:</p>
 
         <table class="bg-white rounded-lg w-full overflow-hidden text-royal-blue table-fixed mb-4">
-          <thead class="divide-x divide-y border-b">
+          <thead class="divide-x divide-y">
             <tr class="divide-x divide-y">
               <th>Sun<span class="hidden md:inline">, June</span> 25</th>
               <th>Mon<span class="hidden md:inline">, June</span> 26</th>
@@ -184,16 +178,9 @@
   </template>
 
   <section class="p-4 flex flex-col gap-4 items-center justify-center">
-    <h2 class="font-bold text-[1.5rem] mb-2">Get your tickets:</h2>
-
-    <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
-
-      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-zuerich,plus-one-zuerich,supporter-zuerich,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Zürich'">🇨🇭 Start in Zürich</a>
-
-      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-milan,plus-one-milan,supporter-milan,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Milan'">🇮🇹 Start in Milan</a>
-
-      <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-innsbruck,plus-one-innsbruck,supporter-innsbruck,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Innsbruck'">🇦🇹 Start in Innsbruck</a>
-    </div>
+    <a href="/2023/booking" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">
+      🎟️ Get your tickets
+    </a>
   </section>
 </template>
 
@@ -202,22 +189,21 @@ import GuideCheckbox from "../components/GuideCheckbox.vue"
 import TickTockSection from "../components/TickTockSection.vue"
 import SectionContent from "../components/SectionContent.vue"
 import SectionSubheader from "../components/SectionSubheader.vue"
+import StarterCityChooser from "../components/StarterCityChooser.vue"
 </script>
 
 <script>
-
-
+import cities from "../mixins/cities.js"
 export default {
+  mixins: [cities],
   data(){
     return {
       checked: [],
-      starterCity: null,
       option: false
     }
   },
 
   mounted(){
-    this.starterCity = localStorage.getItem("starterCity") || nul
     this.checked = JSON.parse(localStorage.getItem("checked")) || []
     this.option = JSON.parse(localStorage.getItem("option")) || false
   },
@@ -229,58 +215,6 @@ export default {
     option(){
       localStorage.setItem("option", this.option);
     },
-    starterCity(){
-      localStorage.setItem("starterCity", this.starterCity);
-    }
   },
-
-  computed: {
-    cities(){
-      return ["Zürich", "Milan", "Innsbruck"]
-    },
-
-    cityEmojis(){
-      return {
-        "Innsbruck": "🇦🇹",
-        "Milan": "🇮🇹",
-        "Zürich": "🇨🇭"
-      }
-    },
-
-    cityEmoji(){
-      return this.cityEmojis[this.starterCity]
-    },
-
-    country(){
-      if(this.starterCity === 'Innsbruck')
-      {
-        return "Austria"
-      }
-      if(this.starterCity === 'Zürich')
-      {
-        return "Switzerland"
-      }
-      if(this.starterCity === 'Milan')
-      {
-        return "Italy"
-      }
-    },
-
-    transportEmoji(){
-      if(this.starterCity === 'Innsbruck')
-      {
-        return "🚌"
-      }
-      return "🚂"
-    },
-
-    trainOrBus(){
-      if(this.starterCity === 'Innsbruck')
-      {
-        return "Bus"
-      }
-      return "Train"
-    }
-  }
 }
 </script>

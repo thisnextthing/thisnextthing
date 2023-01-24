@@ -1,17 +1,28 @@
 <template>
-  <section :id="id" :class="type">
+  <section :id="id" :class="useClass">
     <slot />
   </section>
 </template>
 
 <script>
+import tickTock from "../tickTock.js"
 export default {
-  props: ["id", "type"]
+  props: ["id", "type"],
+
+  computed: {
+    useClass(){
+      if(this.type)
+      {
+        return this.type
+      }
+      return `${tickTock.next()} p-4`
+    }
+  }
 }
 </script>
 
 <style scoped>
-  section {  max-width: 80ch; @apply md:pb-8 }
+  section {  max-width: 80ch; @apply md:mb-4 }
 
   section.tick, section.tock { @apply bg-opacity-80 -mt-4 md:-mt-8 rounded-xl overflow-hidden  }
 
