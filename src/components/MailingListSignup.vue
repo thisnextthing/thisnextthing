@@ -5,7 +5,7 @@
     <div class="flex items-center justify-center relative mt-4 p-4 transition-all" :class="{'pt-20': consented}">
       <div class="absolute top-0 left-0 right-0 rounded p-4 flex items-center justify-center transition-all"
            :class="{
-            'bg-black opacity-90 bottom-0': !consented
+            'bg-royal-blue opacity-95 bottom-0': !consented
            }">
         <fieldset>
           <legend class="sr-only">Consent to sign up</legend>
