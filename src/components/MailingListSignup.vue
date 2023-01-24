@@ -1,12 +1,11 @@
 <template>
   <form @submit.prevent.stop="submit">
-    <h2 for="email" class="block text-md font-medium text-center">Sign up for updates</h2>
-
-    <div class="flex items-center justify-center relative mt-4 p-4 transition-all" :class="{'pt-20': consented}">
-      <div class="absolute top-0 left-0 right-0 rounded p-4 flex items-center justify-center transition-all"
+    <div class="flex items-center justify-center relative mt-4 p-4 transition-all" :class="{'pt-[7rem]': consented}">
+      <div class="absolute top-0 left-0 right-0 rounded p-4 flex flex-col gap-4 items-center justify-center transition-all"
            :class="{
             'bg-royal-blue opacity-95 bottom-0': !consented
            }">
+        <h2 for="email" class="block text-md font-light text-center" :class="{'text-white': !consented}">Sign up for updates</h2>
         <fieldset>
           <legend class="sr-only">Consent to sign up</legend>
           <div class="relative flex items-start">
