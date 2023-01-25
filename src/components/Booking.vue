@@ -6,7 +6,7 @@
       </h2>
 
       <p>
-        We realise that This Next Thing offers some unique choices that you may not have experienced elswhere. Hopefully this step-by-step guide to booking will help you.
+        We realise that This Next Thing offers some unique choices that you may not have experienced elsewhere. Hopefully this step-by-step guide to booking will help you.
       </p>
 
     </SectionContent>
