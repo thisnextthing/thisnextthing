@@ -43,7 +43,7 @@
 
             <tr class="divide-x divide-y">
               <td>&nbsp;</td>
-              <td class="text-center bg-red-100">{{transportEmoji}} {{trainOrBus}}<span class="hidden md:inline"> from {{cityEmoji}}</span></td>
+              <td class="text-center bg-red-100">🚌 and 🚂 <span class="hidden md:inline"> from {{cityEmoji}}</span></td>
               <td class="text-center bg-amber-300" colspan="1">🪑 AM Conf<span class="hidden md:inline">erence</span></td>
               <td rowspan="5">&nbsp;</td>
             </tr>
@@ -54,7 +54,7 @@
             </tr>
 
             <tr class="divide-x divide-y">
-              <td class="text-center bg-amber-100">{{cityEmoji}} Unconf<span class="hidden md:inline">erence</span></td>
+              <td class="text-center bg-amber-100">{{cityEmoji}} Warmup</td>
               <td class="text-center bg-amber-300" colspan="2">🪑 PM Conf<span class="hidden md:inline">erence</span></td>
             </tr>
 
@@ -100,7 +100,7 @@
           </GuideCheckbox>
 
           <GuideCheckbox item="day-one-transport" v-model="checked" hint="We’ll share exact time and location with you">
-            {{transportEmoji}} Make your way to the {{trainOrBus}}
+            🚌 Make your way to the meeting point.
           </GuideCheckbox>
 
           <GuideCheckbox item="day-one-views" v-model="checked" hint="Don’t forget to look out the windows!">
