@@ -9,6 +9,10 @@
         We realise that This Next Thing offers some unique choices that you may not have experienced elsewhere. Hopefully this step-by-step guide to booking will help you.
       </p>
 
+      <p>
+        <strong>Note</strong> Due to the logistics required for an event like this, tickets for the in-person event will be available until <strong>April 1st, 2023</strong>. After that, we will announce our online events and online-only tickets will be made available.
+      </p>
+
     </SectionContent>
   </TickTockSection>
 
