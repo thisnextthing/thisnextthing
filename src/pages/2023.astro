@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/2023.astro';
+import MailingListSignup from "../components/MailingListSignup.vue"
 
 import Kronenhof from "../images/kronenhof.jpg"
 import KronenhofWide from "../images/kronenhof-wide.jpg"
@@ -71,6 +72,24 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 			<p>
 				<a class="font-bold" href="https://en.wikipedia.org/wiki/Thing_(assembly)#Norway" target="_new">“Thing”</a> in its original sense was the gathering of people for lawmaking, socialising, and trade. This Next Thing will gather interesting and interested people, celebrating our relationships with the world, and exploring how those relationships should evolve.
 			</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="who" type="tock" class="pb-4">
+	<SectionContent>
+		<SectionHeader>A little teaser</SectionHeader>
+			<p>One of the funnest parts of Funconf was not giving too much away about the lineup and the schedule. Keeping things close to our chest is part of the surprise and delight of the show.</p>
+
+			<p>
+				There was one thing that was implictly present at all three Funconf events, and that was three individuals who trusted us and egged us on and came and spoke at all three events. We’re beyond delighted to announce that for continuity, and to pass the baton as it were, Michael Lopp, Tom Preston-Werner and Werner Vogels have all confirmed their attendance at This Next Thing.
+			</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="who" type="tick" class="pb-4">
+	<SectionContent>
+		<SectionHeader>Sign up for updates</SectionHeader>
+			<MailingListSignup client:load />
 		</SectionContent>
 	</TickTockSection>
 
