@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/2023.astro';
+import MailingListSignup from "../components/MailingListSignup.vue"
 
 import Kronenhof from "../images/kronenhof.jpg"
 import KronenhofWide from "../images/kronenhof-wide.jpg"
@@ -8,6 +9,10 @@ import Eamo from "../images/eamo.jpg"
 
 import Abby from "../images/abby.jpg"
 import Casey from "../images/casey.jpg"
+
+import Werner from "../images/werner.jpg"
+import Tom from "../images/tom.jpg"
+import Michael from "../images/michael.jpg"
 
 import TickTockSection from "../components/TickTockSection.vue"
 import SectionContent from "../components/SectionContent.vue"
@@ -71,6 +76,49 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 			<p>
 				<a class="font-bold" href="https://en.wikipedia.org/wiki/Thing_(assembly)#Norway" target="_new">“Thing”</a> in its original sense was the gathering of people for lawmaking, socialising, and trade. This Next Thing will gather interesting and interested people, celebrating our relationships with the world, and exploring how those relationships should evolve.
 			</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="who" type="tock" class="pb-4">
+		<SectionContent>
+			<SectionHeader>A little teaser</SectionHeader>
+			<p>One of the funnest parts of Funconf was not giving too much away about the lineup and the schedule. Keeping things close to our chest is part of the surprise and delight of the show.</p>
+
+			<div class="flex flex-col md:flex-row gap-4 mb-4">
+				<a href="https://randsinrepose.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
+					<img src={Michael} class="rounded-full w-24" />
+					<div class="flex flex-1 flex-col md:text-center">
+						<strong>Michael Lopp aka Rands</strong>
+						<small>Engineering Leader, Apple</small>
+					</div>
+				</a>
+
+				<a href="https://tom.preston-werner.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
+					<img src={Tom} class="rounded-full w-24" />
+					<div class="flex flex-1 flex-col md:text-center">
+						<strong>Tom Preston Werner</strong>
+						<small>Co-founder, Preston Werner Ventures</small>
+					</div>
+				</a>
+
+				<a href="https://www.allthingsdistributed.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
+					<img src={Werner} class="rounded-full w-24" />
+					<div class="flex flex-1 flex-col md:text-center">
+						<strong>Werner Vogels</strong>
+						<small>CTO, Amazon</small>
+					</div>
+				</a>
+			</div>
+			<p>
+				That said, for continuity, and to pass the baton as it were, we asked Michael Lopp, Tom Preston-Werner, and Werner Vogels back. Michael, Tom, and Werner did three-for-three at Funconf, and we’re delighted to see their return.
+			</p>
+		</SectionContent>
+	</TickTockSection>
+
+	<TickTockSection id="who" type="tick" class="pb-4">
+	<SectionContent>
+		<SectionHeader>Sign up for updates</SectionHeader>
+			<MailingListSignup client:load />
 		</SectionContent>
 	</TickTockSection>
 

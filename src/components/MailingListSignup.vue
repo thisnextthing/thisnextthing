@@ -1,11 +1,11 @@
 <template>
-  <form @submit.prevent.stop="submit" class="rounded overflow-hidden rotate-1 bg-light-blue mt-4">
-    <div class="bg-light-blue flex items-center justify-center relative p-4 transition-all w-64" :class="{'pt-[8rem]': consented}">
+  <form @submit.prevent.stop="submit" class="rounded overflow-hidden mt-4">
+    <div class="flex items-center justify-center relative p-4 transition-all" :class="{'pt-[8rem]': consented}">
       <div class="absolute top-0 left-0 right-0 flex flex-col gap-4 items-center justify-center transition-all"
            :class="{
             'bg-light-blue bg-opacity-95 bottom-0': !consented
            }">
-        <div class="flex flex-col gap-4 p-4 border-b bg-light-blue" :class="{'border-t': !consented}">
+        <div class="flex flex-col gap-4 p-4 border-b " :class="{'border-t': !consented}">
           <h2 for="email" class="block text-md font-bold text-center">Sign up for updates</h2>
           <fieldset>
             <legend class="sr-only">Consent to sign up</legend>
