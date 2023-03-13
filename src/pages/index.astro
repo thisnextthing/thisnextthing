@@ -4,11 +4,18 @@ import Logo from "../images/tnt-logo.svg"
 
 import Paul from "../images/paul.jpg"
 import Eamo from "../images/eamo.jpg"
+
+import KronenhofCropped from "../images/kronenhof-cropped.jpg"
+
+import TickTockSection from "../components/TickTockSection.vue"
+import SectionContent from "../components/SectionContent.vue"
+import SectionHeader from "../components/SectionHeader.vue"
+import SectionSubheader from "../components/SectionSubheader.vue"
 ---
 <Layout title="This Next Thing">
 	<div class="md:flex justify-center leading-0">
 		<main>
-			<div class="pb-16 flex flex-col gap-2 items-center justify-center text-royal-blue">
+			<div class="pb-16 flex flex-col gap-2 items-center justify-center">
 				<img src={Logo} alt="This Next Thing" class="md:w-[30rem]"/>
 				<h1 class="text-center font-medium md:font-light text-[1.2rem] md:text-[3rem] uppercase">A journey for the curious mind</h1>
 
@@ -17,35 +24,29 @@ import Eamo from "../images/eamo.jpg"
 					<br>
 					<span class="text-[1rem] md:text-md font-light">A spiritual successor to Funconf</span>
 				</p>
-				<a href="/2023">
-					Full details...
-				</a>
 			</div>
+
+			<a class="block" href="/2023">
+				<TickTockSection id="who" type="tock" class="hover:scale-105 shadow-lg">
+					<img src={KronenhofCropped}/>
+					<SectionContent>
+						<SectionHeader>Full details now available</SectionHeader>
+						<p>
+							If you’d like to join us on our Switzerland adventure, registration is available until April 1st.
+						</p>
+					</SectionContent>
+				</TickTockSection>
+			</a>
 		</main>
 	</div>
 </Layout>
 
 <style>
-	p { @apply mb-8 }
+	p { @apply mb-4 }
 	h1 { @apply font-bold text-[3rem] }
 	h2 { @apply font-bold text-[1.5rem] mb-2 }
 	h3 { @apply font-medium text-[1.2rem]  }
 	h4 { font-weight: bold }
 
 	aside { @apply w-full md:w-[26rem] border-b md:border-b-0 md:border-r border-white p-8 }
-	section { @apply p-4 md:p-8; max-width: 80ch }
-
-	section.tick, section.tock { @apply -mt-4 md:-mt-8  }
-
-	.tick { 
-		@apply bg-light-blue ml-4 md:ml-8 text-royal-blue;
-	 }
-
-	.tock { 
-		@apply bg-royal-blue mr-4 md:mr-8 text-white;
-	 }
-
-	.tock h2, .tock strong {
-		@apply text-light-blue
-	}
 </style>

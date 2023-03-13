@@ -10,6 +10,10 @@ import Eamo from "../images/eamo.jpg"
 import Abby from "../images/abby.jpg"
 import Casey from "../images/casey.jpg"
 
+import Werner from "../images/werner.jpg"
+import Tom from "../images/tom.jpg"
+import Michael from "../images/michael.jpg"
+
 import TickTockSection from "../components/TickTockSection.vue"
 import SectionContent from "../components/SectionContent.vue"
 import SectionHeader from "../components/SectionHeader.vue"
@@ -76,12 +80,17 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 	</TickTockSection>
 
 	<TickTockSection id="who" type="tock" class="pb-4">
-	<SectionContent>
-		<SectionHeader>A little teaser</SectionHeader>
+		<SectionContent>
+			<SectionHeader>A little teaser</SectionHeader>
 			<p>One of the funnest parts of Funconf was not giving too much away about the lineup and the schedule. Keeping things close to our chest is part of the surprise and delight of the show.</p>
 
+			<div class="flex gap-4">
+				<img src={Michael} class="rounded-full w-16 flex-1" />
+				<img src={Tom} class="rounded-full w-16 flex-1" />
+				<img src={Werner} class="rounded-full w-16 flex-1" />
+			</div>
 			<p>
-				There was one thing that was implictly present at all three Funconf events, and that was three individuals who trusted us and egged us on and came and spoke at all three events. We’re beyond delighted to announce that for continuity, and to pass the baton as it were, Michael Lopp, Tom Preston-Werner and Werner Vogels have all confirmed their attendance at This Next Thing.
+				That said, for continuity, and to pass the baton as it were, we asked Michael Lopp, Tom Preston-Werner and Werner Vogels back. Michael, Tom and Werner did three-for-three at Funconf, and we’re delighted to see their return.
 			</p>
 		</SectionContent>
 	</TickTockSection>
