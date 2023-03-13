@@ -84,13 +84,33 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 			<SectionHeader>A little teaser</SectionHeader>
 			<p>One of the funnest parts of Funconf was not giving too much away about the lineup and the schedule. Keeping things close to our chest is part of the surprise and delight of the show.</p>
 
-			<div class="flex gap-4">
-				<img src={Michael} class="rounded-full w-16 flex-1" />
-				<img src={Tom} class="rounded-full w-16 flex-1" />
-				<img src={Werner} class="rounded-full w-16 flex-1" />
+			<div class="flex flex-col md:flex-row gap-4 mb-4">
+				<a href="https://randsinrepose.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
+					<img src={Michael} class="rounded-full w-24" />
+					<div class="flex flex-1 flex-col md:text-center">
+						<strong>Michael Lopp aka Rands</strong>
+						<small>Engineering Leader, Apple</small>
+					</div>
+				</a>
+
+				<a href="https://tom.preston-werner.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
+					<img src={Tom} class="rounded-full w-24" />
+					<div class="flex flex-1 flex-col md:text-center">
+						<strong>Tom Preston Werner</strong>
+						<small>Co-founder, Preston Werner Ventures</small>
+					</div>
+				</a>
+
+				<a href="https://www.allthingsdistributed.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
+					<img src={Werner} class="rounded-full w-24" />
+					<div class="flex flex-1 flex-col md:text-center">
+						<strong>Werner Vogels</strong>
+						<small>CTO, Amazon</small>
+					</div>
+				</a>
 			</div>
 			<p>
-				That said, for continuity, and to pass the baton as it were, we asked Michael Lopp, Tom Preston-Werner and Werner Vogels back. Michael, Tom and Werner did three-for-three at Funconf, and we’re delighted to see their return.
+				That said, for continuity, and to pass the baton as it were, we asked Michael Lopp, Tom Preston-Werner, and Werner Vogels back. Michael, Tom, and Werner did three-for-three at Funconf, and we’re delighted to see their return.
 			</p>
 		</SectionContent>
 	</TickTockSection>
