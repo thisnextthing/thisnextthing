@@ -33,9 +33,15 @@ import Flux from '../images/flux.svg';
   <body class="bg-fixed md:bg-cover text-royal-blue">
     <div class="p-4 md:p-0 md:flex justify-center leading-0">
       <aside class="w-full w-[20rem] md:w-[26rem] p-8 m-auto md:m-0">
-        <a href="/2023">
-          <img src={Logo} alt="This Next Thing" class="md:sticky md:top-0 md:-rotate-3 hover:scale-110 transition-all"/>
-        </a>
+        <div class="md:sticky md:top-0 text-center">
+          <a href="/2023">
+            <img src={Logo} alt="This Next Thing" class="md:-rotate-3 hover:scale-110 transition-all" />
+          </a>
+
+          <a href="/2023/booking" class="block bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold mt-8">
+            🎟️ Get your tickets
+          </a>
+        </div>
       </aside>
 
       <main class="md:my-32">
