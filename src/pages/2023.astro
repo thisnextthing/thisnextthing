@@ -27,11 +27,13 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 
 	<TickTockSection id="what" type="tock">
 		<SectionContent>
-			<SectionHeader>Please note</SectionHeader>
+			<SectionHeader>Registration is now closed</SectionHeader>
 
 			<p>
-				Registration for This Next Thing is no longer available. We’ll be announcing details soon of our online participation programme, sponsorship opportunities and scholarships. If you’d like to start a discussion about any of these, please <a href="/2023/contact">get in touch.</a>
+				Registration for This Next Thing is no longer available. We’ll be announcing details soon of our online participation programme, sponsorship opportunities and scholarships. If you’d like to start a discussion about any of these, please <a href="/2023/contact">get in touch.</a> Sign up to our list below to stay in the loop.
 			</p>
+
+			<MailingListSignup client:load />
 
 		</SectionContent>
 	</TickTockSection>
@@ -127,13 +129,6 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 	</TickTockSection>
 
 	<TickTockSection id="who" type="tick" class="pb-4">
-	<SectionContent>
-		<SectionHeader>Sign up for updates</SectionHeader>
-			<MailingListSignup client:load />
-		</SectionContent>
-	</TickTockSection>
-
-	<TickTockSection id="who" type="tock" class="pb-4">
 		<SectionContent>
 			<SectionHeader>Who?</SectionHeader>
 			<p>
@@ -192,7 +187,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 		</SectionContent>
 	</TickTockSection>
 
-	<TickTockSection id="when" type="tick">
+	<TickTockSection id="when" type="tock">
 		<SectionContent>
 			<SectionHeader>When?</SectionHeader>
 			<p>
@@ -243,7 +238,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 		</SectionContent>
 	</TickTockSection>
 
-	<TickTockSection id="where" type="tock">
+	<TickTockSection id="where" type="tick">
 		<img src={KronenhofWide}/>
 		<SectionContent>
 			<SectionHeader>Where?</SectionHeader>
@@ -262,7 +257,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 		</SectionContent>
 	</TickTockSection>
 
-	<TickTockSection id="why" type="tick">
+	<TickTockSection id="why" type="tock">
 		<SectionContent>
 			<SectionHeader>Why?</SectionHeader>
 			<p>
@@ -276,7 +271,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 		</SectionContent>
 	</TickTockSection>
 
-	<section class="p-4 -rotate-1 flex flex-col max-w-sm  m-auto gap-4 items-center justify-center bg-light-blue rounded-lg text-royal-blue mt-8">
+	<section class="p-4 rotate-1 flex flex-col max-w-sm  m-auto gap-4 items-center justify-center bg-light-blue rounded-lg text-royal-blue mt-8">
     Registration is now closed.
   </section>
 </Layout>
