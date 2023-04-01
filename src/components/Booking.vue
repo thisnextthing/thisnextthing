@@ -91,6 +91,10 @@
       <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-milan,plus-one-milan,supporter-milan,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Milan'">🇮🇹 Start in Milan</a>
 
       <a href="#/tito/this-next-thing/2023/en/registrations/new?releases=start-innsbruck,plus-one-innsbruck,supporter-innsbruck,kid-ticket" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold" v-if="starterCity === 'Innsbruck'">🇦🇹 Start in Innsbruck</a>
+
+      <p v-if="!starterCity">
+        Choose a city above first.
+      </p>
     </div>
   </section>
 </template>
