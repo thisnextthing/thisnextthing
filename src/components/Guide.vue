@@ -177,10 +177,8 @@
     </TickTockSection>
   </template>
 
-  <section class="p-4 flex flex-col gap-4 items-center justify-center">
-    <a href="/2023/booking" class="bg-royal-blue text-white hover:bg-warm-blue active:bg-warm-blue p-4 uppercase font-bold">
-      🎟️ Get your tickets
-    </a>
+  <section class="p-4 rotate-1 flex flex-col max-w-sm  m-auto gap-4 items-center justify-center bg-light-blue rounded-lg text-royal-blue mt-8">
+    Registration is now closed.
   </section>
 </template>
 
