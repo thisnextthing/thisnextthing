@@ -10,7 +10,15 @@
       </p>
 
       <p>
-        <strong>Note</strong> Due to the logistics required for an event like this, tickets for the in-person event will be available until <strong>April 1st, 2023</strong>. After that, we will announce our online events and online-only tickets will be made available.
+        <strong>Note</strong> Due to the logistics required for an event like this, tickets for the in-person event are no longer available.
+      </p>
+
+      <p>
+        We will post details of our online-only participation soon.
+      </p>
+
+      <p>
+        The below is left for posterity and reference.
       </p>
 
     </SectionContent>
