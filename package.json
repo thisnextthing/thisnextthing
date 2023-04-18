@@ -11,11 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^2.1.2",
-    "@astrojs/vue": "^1.2.2",
+    "@astrojs/tailwind": "^3.1.1",
+    "@astrojs/vue": "^2.1.1",
     "@headlessui/vue": "^1.7.7",
     "@heroicons/vue": "^2.0.13",
-    "astro": "^1.4.6",
+    "astro": "^2.3.0",
     "axios": "^1.2.3",
     "tailwindcss": "^3.2.4",
     "vue": "^3.2.45"
