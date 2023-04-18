@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { AtSymbolIcon } from '@heroicons/vue/20/solid'
+import { AtSymbolIcon } from '@heroicons/vue/20/solid/index.js'
 import {ref} from "vue"
 
 import axios from "axios"
