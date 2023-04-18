@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent.stop="submit" class="rounded overflow-hidden mt-4">
     <div class="flex items-center justify-center relative p-4 transition-all" :class="{'pt-[8rem]': consented}">
-      <div class="absolute top-0 left-0 right-0 flex flex-col gap-4 items-center justify-center transition-all"
+      <div class="absolute top-0 left-0 right-0 flex flex-col gap-4 items-center justify-center transition-all p4"
            :class="{
             'bg-light-blue bg-opacity-95 bottom-0': !consented
            }">
@@ -26,12 +26,10 @@
 </template>
 
 <script setup>
-import { AtSymbolIcon } from '@heroicons/vue/20/solid'
+import { AtSymbolIcon } from '@heroicons/vue/20/solid/index.js'
 import {ref} from "vue"
 
 import axios from "axios"
-
-console.log("hello")
 
 const email = ref("")
 const consented = ref(false)
