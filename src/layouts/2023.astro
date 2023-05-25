@@ -10,8 +10,11 @@ import contours from "../images/switzerland-contours.svg"
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
 
+const titoJsSrc = `https://js.tito.io/v2`
+
 import Favicon from '../images/favicon.png';
 import Flux from '../images/flux.svg';
+
 ---
 
 <!DOCTYPE html>
@@ -26,7 +29,7 @@ import Flux from '../images/flux.svg';
     
     <title>{title}</title>
     <meta name="description" content="The spiritual successor to Funconf">
-    <script src="https://js.tito.io/v2" async></script>
+    <script src={titoJsSrc} async></script>
 
     <script defer data-domain="thisnextthing.com" src="https://plausible.io/js/script.js"></script>
   </head>
