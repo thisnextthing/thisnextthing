@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/2023.astro';
 import MailingListSignup from "../components/MailingListSignup.vue"
 
@@ -45,7 +46,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 		</SectionContent>
 	</TickTockSection>
 	<TickTockSection id="what" type="tick">
-		<img src={Kronenhof}/>
+		<Image alt="Kronenhof" src={Kronenhof}/>
 		<SectionContent>
 			<SectionHeader>What?</SectionHeader>
 			<p>
@@ -106,7 +107,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 
 			<div class="flex flex-col md:flex-row gap-4 mb-4">
 				<a href="https://randsinrepose.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
-					<img src={Michael} class="rounded-full w-24" />
+					<Image alt="Michael Lopp" src={Michael} class="rounded-full w-24" />
 					<div class="flex flex-1 flex-col md:text-center">
 						<strong>Michael Lopp aka Rands</strong>
 						<small>Engineering Leader, Apple</small>
@@ -114,7 +115,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 				</a>
 
 				<a href="https://tom.preston-werner.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
-					<img src={Tom} class="rounded-full w-24" />
+					<Image alt="Tom Preston-Werner" src={Tom} class="rounded-full w-24" />
 					<div class="flex flex-1 flex-col md:text-center">
 						<strong>Tom Preston Werner</strong>
 						<small>Co-founder, Preston Werner Ventures</small>
@@ -122,7 +123,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 				</a>
 
 				<a href="https://www.allthingsdistributed.com" class="flex flex-row md:flex-col gap-4 md:gap-0 flex-1 items-center justify-center hover:scale-105 cursor-pointer">
-					<img src={Werner} class="rounded-full w-24" />
+					<Image alt="Werner Vogels" src={Werner} class="rounded-full w-24" />
 					<div class="flex flex-1 flex-col md:text-center">
 						<strong>Werner Vogels</strong>
 						<small>CTO, Amazon</small>
@@ -144,7 +145,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 			<div class="flex flex-col items-start justify-center gap-4 md:gap-8">
 				<div class="flex flex-1 gap-4">
 					<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
-						<img src={Eamo} class="rounded-full" />
+						<Image alt="Eamon Leonard" src={Eamo} class="rounded-full" />
 						
 					</div>
 
@@ -156,7 +157,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 
 				<div class="flex flex-1 gap-4">
 					<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
-						<img src={Paul} class="rounded-full" />
+						<Image alt="Paul Campbell" src={Paul} class="rounded-full" />
 						
 					</div>
 
@@ -168,7 +169,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 			
 				<div class="flex flex-1 gap-4">
 					<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
-						<img src={Abby} class="rounded-full" />
+						<Image alt="Abby Phoenix" src={Abby} class="rounded-full" />
 						
 					</div>
 
@@ -233,7 +234,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 	</TickTockSection>
 
 	<TickTockSection id="where" type="tick">
-		<img src={KronenhofWide}/>
+		<Image alt="Kronenhof" src={KronenhofWide}/>
 		<SectionContent>
 			<SectionHeader>Where?</SectionHeader>
 
