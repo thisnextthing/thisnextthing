@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Logo from "../images/tnt-logo.svg"
+import { Image } from 'astro:assets';
 
 import Paul from "../images/paul.jpg"
 import Eamo from "../images/eamo.jpg"
@@ -16,7 +17,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 	<div class="md:flex justify-center leading-0">
 		<main>
 			<div class="pb-16 flex flex-col gap-2 items-center justify-center">
-				<img src={Logo} alt="This Next Thing" class="md:w-[30rem]"/>
+				<Image src={Logo} alt="This Next Thing" class="md:w-[30rem]"/>
 				<h1 class="text-center font-medium md:font-light text-[1.2rem] md:text-[3rem] uppercase">A journey for the curious mind</h1>
 
 				<p class="text-xl font-light md:font-normal text-center">
@@ -28,7 +29,7 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 
 			<a class="block" href="/2023">
 				<TickTockSection id="who" type="tock" class="hover:scale-105 shadow-lg">
-					<img src={KronenhofCropped}/>
+					<Image alt="Kronenhof" src={KronenhofCropped}/>
 					<SectionContent>
 						<SectionHeader>Limited sponsorships and scholarships available.</SectionHeader>
 						<p>

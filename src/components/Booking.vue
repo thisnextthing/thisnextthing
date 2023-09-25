@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+---
+
 <template>
   <TickTockSection type="tick">
     <SectionContent>
@@ -74,17 +78,17 @@
   </TickTockSection>
 
   <TickTockSection type="tock" v-if="starterCity === 'Zürich'">
-    <img :src="zurichPhoto"/>
+    <Image alt="Zurich" :src="zurichPhoto"/>
     <p class="p-4">Zürich, photo by <a href="https://unsplash.com/@rickpsd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Henrique Ferreira</a> on <a href="https://unsplash.com/photos/6p-I-X-sPUY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
   </TickTockSection>
 
   <TickTockSection type="tock" v-if="starterCity === 'Milan'">
-    <img :src="milanPhoto"/>
+    <Image alt="Milan" :src="milanPhoto"/>
     <p class="p-4">Milan, photo by <a href="https://unsplash.com/@mrsimonfischer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Szymon Fischer</a> on <a href="https://unsplash.com/photos/bODFQ7D3JYo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
   </TickTockSection>
 
   <TickTockSection type="tock" v-if="starterCity === 'Innsbruck'">
-    <img :src="innsbruckPhoto"/>
+    <Image alt="Innsbruck" :src="innsbruckPhoto"/>
     <p class="p-4">Innsbruck, photo by <a href="https://unsplash.com/@nicolebaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nicole Baster</a> on <a href="https://unsplash.com/photos/DZUgKFjEDuM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
   </TickTockSection>
 
