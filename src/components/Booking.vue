@@ -119,9 +119,9 @@ import SectionSubheader from "../components/SectionSubheader.vue"
 
 import StarterCityChooser from "../components/StarterCityChooser.vue"
 
-import innsbruckPhoto from "../images/cities/innsbruck.jpg"
-import milanPhoto from "../images/cities/milan.jpg"
-import zurichPhoto from "../images/cities/zurich.jpg"
+import innsbruckPhoto from "../images/2023/cities/innsbruck.jpg"
+import milanPhoto from "../images/2023/cities/milan.jpg"
+import zurichPhoto from "../images/2023/cities/zurich.jpg"
 </script>
 
 <script>

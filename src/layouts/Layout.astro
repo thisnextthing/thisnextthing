@@ -3,12 +3,12 @@ export interface Props {
 	title: string;
 }
 
-import contours from "../images/switzerland-contours.svg"
+import contours from "../images/2023/switzerland-contours.svg"
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
 
-import Favicon from '../images/favicon.png';
-import Flux from '../images/flux.svg';
+import Favicon from '../images/2023/favicon.png';
+import Flux from '../images/2023/flux.svg';
 ---
 
 <!DOCTYPE html>
@@ -27,13 +27,13 @@ import Flux from '../images/flux.svg';
 
 		<script defer data-domain="thisnextthing.com" src="https://plausible.io/js/script.js"></script>
 	</head>
-	<body class="bg-cover bg-fixed">
+	<body class="font-sans bg-cover bg-fixed">
 		<slot />
 	</body>
 </html>
 
 <style is:global define:vars={{ contours }}>
 	body {
-		background-image: url(/src/images/switzerland-contours.svg);
+		background-image: url(/src/images/2023/switzerland-contours.svg);
 	}
 </style>
