@@ -8,6 +8,10 @@ import MainMenu from "../components/MainMenu.vue"
 
 import FaviconPNG from '../images/2024/favicon.png';
 import FaviconSVG from '../images/2024/favicon.svg';
+
+import { getImage } from "astro:assets"
+import bg from "../images/2024/mountains.jpg"
+const optimizedBackgroundImage = await getImage({ src: bg })
 ---
 
 <!DOCTYPE html>
@@ -26,7 +30,7 @@ import FaviconSVG from '../images/2024/favicon.svg';
 
     <script defer data-domain="thisnextthing.com" src="https://plausible.io/js/script.js"></script>
   </head>
-  <body class="font-sans bg-cover bg-fixed">
+  <body class="font-sans bg-cover bg-fixed" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
     <div class="flex h-screen">
       <div class="m-auto">
         <slot />
@@ -34,9 +38,3 @@ import FaviconSVG from '../images/2024/favicon.svg';
     </div>
   </body>
 </html>
-
-<style is:global>
-  body {
-    background-image: url(/src/images/2024/mountains.jpg);
-  }
-</style>
