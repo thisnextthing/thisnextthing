@@ -14,5 +14,5 @@ module.exports = {
 			"sans": "Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif"
 		}
 	},
-	plugins: [require('@tailwindcss/forms'),],
+	plugins: [require('@tailwindcss/forms'),require('@tailwindcss/typography')],
 }

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/2024.astro';
+import { Image } from 'astro:assets';
+
+import ThisNextThing from "../images/2024/this-next-thing.svg"
+---
+<Layout title="This Next Thing">
+	<div class="letter rounded drop-shadow md:-rotate-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+	<!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+	<div class="mx-auto max-w-3xl py-4 flex flex-col gap-8">
+		<div>
+			<Image src={ThisNextThing} alt="This Next Thing" />
+			A community of folks who want to create a positive impact on the world.
+		</div>
+
+		<div>
+			<em>From the (virtual) desk of Abby, Eamo & Paul</em><br>
+			<strong>Dublin, Ireland</strong>
+		</div>
+
+		<div class="space-y-4 prose">
+
+			<p>
+				We’re back!
+			</p>
+
+			<p>
+				Following a long summer and much deliberation, This Next Thing—the in-person conference—will be back in 2024. We loved Pontresina so much that we will be back in the Grand Hotel Kronenhof next June 17–20.
+			</p>
+
+			<p>
+				The goal of next year is to iterate on what worked and to improve where we can. Right now, you can secure an early-access ticket to guarantee a room in the Kronenhof (additional capacity will again be available in Saratz next door). You can also peruse ways to help.
+			</p>
+
+			<p>
+				We’re excited to see you again next year, and can’t wait to share some of our new ideas.
+			</p>
+
+			<p>
+				—Abby, Eamo & Paul
+			</p>
+
+
+		</div>
+	</div>
+</div>
+</Layout>
+
+<style>
+	p { @apply mb-4 }
+	h1 { @apply font-bold text-[3rem] }
+	h2 { @apply font-bold text-[1.5rem] mb-2 }
+	h3 { @apply font-medium text-[1.2rem]	}
+	h4 { font-weight: bold }
+
+	aside { @apply w-full md:w-[26rem] border-b md:border-b-0 md:border-r border-white p-8 }
+</style>
+
+<style is:global>
+  .letter {
+    background-image: url(/src/images/2024/paper-bg.jpeg);
+  }
+</style>
