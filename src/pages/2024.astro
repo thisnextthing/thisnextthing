@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
 import ThisNextThing from "../images/2024/this-next-thing.svg"
 ---
 <Layout title="This Next Thing">
-	<div class="letter rounded drop-shadow md:-rotate-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+	<div class="letter rounded shadow-xl md:-rotate-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-6">
 	<!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
 	<div class="mx-auto max-w-3xl py-4 flex flex-col gap-8">
 		<div>
@@ -61,6 +61,6 @@ import ThisNextThing from "../images/2024/this-next-thing.svg"
 
 <style is:global>
   .letter {
-    background-image: url(/src/images/2024/paper-bg.jpeg);
+    background: url(/src/images/2024/paper-bg.jpeg);
   }
 </style>
