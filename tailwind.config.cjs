@@ -10,6 +10,9 @@ module.exports = {
 				"world-blue": "#0170bc"
 			}
 		},
+		fontFamily: {
+			"sans": "Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif"
+		}
 	},
 	plugins: [require('@tailwindcss/forms'),],
 }

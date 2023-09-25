@@ -6,16 +6,16 @@ export interface Props {
   type: String
 }
 
-import Logo from "../images/tnt-logo.svg"
+import Logo from "../images/2023/tnt-logo.svg"
 
-import contours from "../images/switzerland-contours.svg"
+import contours from "../images/2023/switzerland-contours.svg"
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
 
 const titoJsSrc = `https://js.tito.io/v2`
 
-import Favicon from '../images/favicon.png';
-import Flux from '../images/flux.svg';
+import Favicon from '../images/2023/favicon.png';
+import Flux from '../images/2023/flux.svg';
 
 ---
 
@@ -77,7 +77,7 @@ import Flux from '../images/flux.svg';
 
 <style is:global define:vars={{ contours }}>
   body {
-    background-image: url(/src/images/switzerland-contours.svg);
+    background-image: url(/src/images/2023/switzerland-contours.svg);
   }
 
   p { margin-bottom: 1rem }
