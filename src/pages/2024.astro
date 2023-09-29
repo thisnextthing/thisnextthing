@@ -4,10 +4,14 @@ import { Image } from 'astro:assets';
 
 import ThisNextThing from "../images/2024/this-next-thing.svg"
 import mountains from "../images/2024/mountains.webp"
+
+import { getImage } from "astro:assets"
+import bg from "../images/2024/paper-bg.jpg"
+const optimizedBackgroundImage = await getImage({ src: bg })
 ---
 <Layout title="This Next Thing">
 	<Image src={mountains} alt="" class="md:hidden"/>
-	<div class="letter bg-cover bg-white md:rounded shadow-xl md:-rotate-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-6">
+	<div class="letter bg-cover bg-white md:rounded shadow-xl md:-rotate-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-6" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
 
 	<!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
 	<div class="mx-auto max-w-3xl py-4 flex flex-col gap-8">
