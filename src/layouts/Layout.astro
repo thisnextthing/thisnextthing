@@ -3,12 +3,15 @@ export interface Props {
 	title: string;
 }
 
-import contours from "../images/2023/switzerland-contours.svg"
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
 
-import Favicon from '../images/2023/favicon.png';
-import Flux from '../images/2023/flux.svg';
+import { getImage } from "astro:assets"
+import FaviconPNG from '../images/2024/favicon.png';
+const optimizedFaviconPNG = await getImage({ src: FaviconPNG })
+
+import FaviconSVG from '../images/2024/favicon.svg';
+const optimizedFaviconSVG = await getImage({ src: FaviconSVG })
 ---
 
 <!DOCTYPE html>
@@ -16,8 +19,8 @@ import Flux from '../images/2023/flux.svg';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" sizes="any" href={Favicon} />
-		<link rel="icon" type="image/svg+xml" href={Flux} />
+		<link rel="icon" sizes="any" href={optimizedFaviconPNG.src} />
+		<link rel="icon" type="image/svg+xml" href={optimizedFaviconSVG.src} />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://js.tito.io/v2" async></script>
@@ -27,13 +30,11 @@ import Flux from '../images/2023/flux.svg';
 
 		<script defer data-domain="thisnextthing.com" src="https://plausible.io/js/script.js"></script>
 	</head>
-	<body class="font-sans bg-cover bg-fixed">
-		<slot />
+	<body class="font-sans">
+		<div class="flex h-screen">
+		  <div class="m-auto">
+		    <slot />
+		  </div>
+		</div>
 	</body>
 </html>
-
-<style is:global define:vars={{ contours }}>
-	body {
-		background-image: url(/src/images/2023/switzerland-contours.svg);
-	}
-</style>
