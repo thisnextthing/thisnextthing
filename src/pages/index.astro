@@ -8,6 +8,10 @@ import { getImage } from "astro:assets"
 import mountains from "../images/2024/mountains.webp"
 const optimizedMountains = await getImage({ src: mountains })
 
+import Paul from "../images/2023/paul.jpg"
+import Eamo from "../images/2023/eamo.jpg"
+import Abby from "../images/2023/abby.jpg"
+
 import Kronenhof from "../images/2023/kronenhof.jpg"
 const optimizedKronenhof = await getImage({ src: Kronenhof })
 
@@ -23,23 +27,53 @@ const optimizedKronenhof = await getImage({ src: Kronenhof })
 
 			<div class="space-y-4">
 				<p>
-					This Next Thing is a non-profit organisation created in 2023 on the back of an inaugural event in June. The organisation aims to foster meaningful relationships between creative people through remarkabel experiences.
-				</p>
-
-				<p>
-					This Next Thing is a non-profit organisation created in 2023 on the back of an inaugural event in the Swiss Alps. The organisation aims to foster meaningful relationships between creative people through remarkabel experiences.
+					This Next Thing is a non-profit organisation created in 2023 after an inaugural event in June. The organisation aims to foster meaningful relationships between creative people through remarkable experiences.
 				</p>
 			</div>
 
-			<div class="space-y-4">
+			<div>
 				<h2>The team</h2>
 				<p>
-					The organisation was founded by Abby Phoenix, Eamon Leonard, and Paul Campbell.
+					The organisation is led by Abby Phoenix, Eamon Leonard, and Paul Campbell.
 				</p>
 
-				<p>
-					This Next Thing is a non-profit organisation created in 2023 on the back of an inaugural event in the Swiss Alps. The organisation aims to foster meaningful relationships between creative people through remarkable experiences.
-				</p>
+				<div class="flex flex-col items-start justify-center gap-4 md:gap-8">
+					<div class="flex flex-1 gap-4">
+						<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+							<Image alt="Abby Phoenix" src={Abby} class="rounded-full" />
+						</div>
+
+						<p class="flex-1">
+							<a href="https://mstdn.social/@aphoenix" class="font-bold text-center">Abby Phoenix</a><br>
+							<em>Executive director</em><br>
+							Abby is a consummate community conference connoisseur. She brings a wealth of logistical experience from prestigious events including <a href="https://rubyconf.org">RubyConf</a>, <a href="https://railsconf.org">RailsConf</a>, and <a href="https://codelandconf.com">Codeland</a>.
+						</p>
+					</div>
+					<div class="flex flex-1 gap-4">
+						<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+							<Image alt="Eamon Leonard" src={Eamo} class="rounded-full" />
+							
+						</div>
+
+						<p class="flex-1">
+							<a href="https://eamo.net" class="font-bold text-center">Eamon Leonard</a><br>
+							<em>Commercial director</em><br>
+							Eamon is a founding parter of <a href="https://broadstone.vc">Broadstone</a>, a pre-seed investment firm based in Dublin. He has spent most of his career in early stage startupland developing and building products, leading teams, and creating communities.
+						</p>
+					</div>
+
+					<div class="flex flex-1 gap-4">
+						<div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+							<Image alt="Paul Campbell" src={Paul} class="rounded-full" />
+						</div>
+
+						<p class="flex-1">
+							<a href="https://www.linkedin.com/in/paulcampbell-tito/" class="font-bold text-center">Paul Campbell</a><br>
+							<em>Technical director</em><br>
+							Paul is the co-founder and CEO of Team Tito. Paul presides over the making of <a href="https://ti.to/">Tito</a>, an app for selling tickets online, and <a href="https://vi.to">Vito</a>, an app for building online communities. Paul also created Úll, a series of conferences inspired by Apple.
+						</p>
+					</div>
+				</div>
 			</div>
 
 			<div class="space-y-4">
