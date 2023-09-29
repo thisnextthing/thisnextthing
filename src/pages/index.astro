@@ -31,6 +31,21 @@ const optimizedKronenhof = await getImage({ src: Kronenhof })
 				</p>
 			</div>
 
+			<div class="space-y-4">
+				<h2>The events</h2>
+
+				<ul class="flex gap-4">
+					<li class="flex-1 rounded overflow-hidden aspect-[16/9] bg-cover relative" style={`background-image: url('${optimizedKronenhof.src}')`}>
+						<a href="/2023" class="text-xl absolute p-4 top-0 right-0 left-0 bottom-0 text-white drop-shadow bg-white bg-opacity-25 hover:bg-opacity-0">
+							2023
+						</a>
+					</li>
+					<li class="flex-1 rounded overflow-hidden aspect-[16/9] bg-cover relative" style={`background-image: url('${optimizedMountains.src}')`}>
+						<a href="/2024" class="text-xl absolute p-4 top-0 right-0 left-0 bottom-0 text-white drop-shadow bg-white bg-opacity-25 hover:bg-opacity-0">2024</a>
+					</li>
+				</ul>
+			</div>
+
 			<div>
 				<h2>The team</h2>
 				<p>
@@ -74,21 +89,6 @@ const optimizedKronenhof = await getImage({ src: Kronenhof })
 						</p>
 					</div>
 				</div>
-			</div>
-
-			<div class="space-y-4">
-				<h2>The events</h2>
-
-				<ul class="flex gap-4">
-					<li class="flex-1 rounded overflow-hidden aspect-[16/9] bg-cover relative" style={`background-image: url('${optimizedKronenhof.src}')`}>
-						<a href="/2023" class="text-xl absolute p-4 top-0 right-0 left-0 bottom-0 text-white drop-shadow bg-white bg-opacity-25 hover:bg-opacity-0">
-							2023
-						</a>
-					</li>
-					<li class="flex-1 rounded overflow-hidden aspect-[16/9] bg-cover relative" style={`background-image: url('${optimizedMountains.src}')`}>
-						<a href="/2024" class="text-xl absolute p-4 top-0 right-0 left-0 bottom-0 text-white drop-shadow bg-white bg-opacity-25 hover:bg-opacity-0">2024</a>
-					</li>
-				</ul>
 			</div>
 		</div>
 	</div>
