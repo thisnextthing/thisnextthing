@@ -6,8 +6,12 @@ export interface Props {
 const { title } = Astro.props;
 import MainMenu from "../components/MainMenu.vue"
 
+import { getImage } from "astro:assets"
 import FaviconPNG from '../images/2024/favicon.png';
+const optimizedFaviconPNG = await getImage({ src: FaviconPNG })
+
 import FaviconSVG from '../images/2024/favicon.svg';
+const optimizedFaviconSVG = await getImage({ src: FaviconSVG })
 ---
 
 <!DOCTYPE html>
@@ -15,8 +19,8 @@ import FaviconSVG from '../images/2024/favicon.svg';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" sizes="any" href={FaviconPNG} />
-		<link rel="icon" type="image/svg+xml" href={FaviconSVG} />
+		<link rel="icon" sizes="any" href={optimizedFaviconPNG.src} />
+		<link rel="icon" type="image/svg+xml" href={optimizedFaviconSVG.src} />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://js.tito.io/v2" async></script>
