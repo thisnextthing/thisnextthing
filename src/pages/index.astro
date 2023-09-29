@@ -3,19 +3,58 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 
 import ThisNextThing from "../images/2024/this-next-thing.svg"
+
+import { getImage } from "astro:assets"
+import mountains from "../images/2024/mountains.webp"
+const optimizedMountains = await getImage({ src: mountains })
+
+import Kronenhof from "../images/2023/kronenhof.jpg"
+const optimizedKronenhof = await getImage({ src: Kronenhof })
+
 ---
 <Layout title="This Next Thing">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-full">
 		<!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
-		<div class="mx-auto max-w-3xl py-4 flex items-center justify-center h-full">
-			<div class="flex flex-col gap-8">
-				<a href="2024" class="p-4 hover:bg-gray-200 rounded">
-					<Image src={ThisNextThing} alt="This Next Thing" />
-					It’s happening again&hellip;
-				</a>
-				<a href="/2023" class="text-sm p-4 hover:text-blue-500">
-					View 2023 site
-				</a>
+		<div class="mx-auto max-w-3xl py-4 flex flex-col gap-8 h-full">
+			<div class="flex flex-col">
+				<Image src={ThisNextThing} alt="This Next Thing" />
+				Inclusive community. Creative people. Magical experiences.
+			</div>
+
+			<div class="space-y-4">
+				<p>
+					This Next Thing is a non-profit organisation created in 2023 on the back of an inaugural event in June. The organisation aims to foster meaningful relationships between creative people through remarkabel experiences.
+				</p>
+
+				<p>
+					This Next Thing is a non-profit organisation created in 2023 on the back of an inaugural event in the Swiss Alps. The organisation aims to foster meaningful relationships between creative people through remarkabel experiences.
+				</p>
+			</div>
+
+			<div class="space-y-4">
+				<h2>The team</h2>
+				<p>
+					The organisation was founded by Abby Phoenix, Eamon Leonard, and Paul Campbell.
+				</p>
+
+				<p>
+					This Next Thing is a non-profit organisation created in 2023 on the back of an inaugural event in the Swiss Alps. The organisation aims to foster meaningful relationships between creative people through remarkable experiences.
+				</p>
+			</div>
+
+			<div class="space-y-4">
+				<h2>The events</h2>
+
+				<ul class="flex gap-4">
+					<li class="flex-1 rounded overflow-hidden aspect-[16/9] bg-cover relative" style={`background-image: url('${optimizedKronenhof.src}')`}>
+						<a href="/2023" class="text-xl absolute p-4 top-0 right-0 left-0 bottom-0 text-white drop-shadow bg-white bg-opacity-25 hover:bg-opacity-0">
+							2023
+						</a>
+					</li>
+					<li class="flex-1 rounded overflow-hidden aspect-[16/9] bg-cover relative" style={`background-image: url('${optimizedMountains.src}')`}>
+						<a href="/2024" class="text-xl absolute p-4 top-0 right-0 left-0 bottom-0 text-white drop-shadow bg-white bg-opacity-25 hover:bg-opacity-0">2024</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
