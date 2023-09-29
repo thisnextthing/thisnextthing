@@ -14,8 +14,12 @@ import MainMenu from "../components/MainMenu.vue"
 
 const titoJsSrc = `https://js.tito.io/v2`
 
+import { getImage } from "astro:assets"
 import Favicon from '../images/2023/favicon.png';
+const optimizedFavicon = await getImage({ src: Favicon })
+
 import Flux from '../images/2023/flux.svg';
+const optimizedFlux = await getImage({ src: Flux })
 
 ---
 
@@ -24,8 +28,8 @@ import Flux from '../images/2023/flux.svg';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" sizes="any" href={Favicon} />
-    <link rel="icon" type="image/svg+xml" href={Flux} />
+    <link rel="icon" sizes="any" href={optimizedFavicon.src} />
+    <link rel="icon" type="image/svg+xml" href={optimizedFlux.src} />
     <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
