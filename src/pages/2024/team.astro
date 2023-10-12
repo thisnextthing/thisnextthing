@@ -3,11 +3,52 @@ import Layout from '../../layouts/2024.astro';
 import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
 import { Image } from 'astro:assets';
 
-import ThisNextThing from "../images/2024/this-next-thing.svg"
-import mountains from "../images/2024/mountains.webp"
+import Paul from "../../images/2024/paul.jpg"
+import Eamo from "../../images/2024/eamo.jpg"
+import Abby from "../../images/2024/abby.jpg"
 ---
 <Layout title="About">
   <WrapperWithNav>
-    <p>The Team</p>
+    <h2>The team</h2>
+    <div class="flex flex-col items-start justify-center gap-4 md:gap-8">
+      <p>
+        The conference is run by <a href="/">This Next Thing CLG</a>, a non-profit organisation headed up by Abby, Eamon, and Paul. We intend to add more conference committee members over time.
+      </p>
+      <div class="flex flex-1 gap-4">
+        <div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+          <Image alt="Abigail Phoenix" src={Abby} class="rounded-full" />
+        </div>
+
+        <p class="flex-1">
+          <a href="https://mstdn.social/@aphoenix" class="font-bold text-center">Abigail Phoenix</a><br>
+          <em>Executive Director</em><br>
+          Abby is a longtime conference organizer whose enthusiasm for community and connection is rivaled only by her love of the almighty spreadsheet. Her previous events include <a href="https://railsconf.org">RailsConf</a>, <a href="https://rubyconf.org">RubyConf</a>, and <a href="https://codelandconf.com">Codeland</a>.
+        </p>
+      </div>
+      <div class="flex flex-1 gap-4">
+        <div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+          <Image alt="Eamon Leonard" src={Eamo} class="rounded-full" />
+          
+        </div>
+
+        <p class="flex-1">
+          <a href="https://eamo.net" class="font-bold text-center">Eamon Leonard</a><br>
+          <em>Commercial Director</em><br>
+          Eamon is a founding parter of <a href="https://broadstone.vc">Broadstone</a>, a pre-seed investment firm based in Dublin. He has spent most of his career in early stage startupland developing and building products, leading teams, and creating communities.
+        </p>
+      </div>
+
+      <div class="flex flex-1 gap-4">
+        <div class="flex flex-col gap-2 items-center justify-start w-24 min-w-min">
+          <Image alt="Paul Campbell" src={Paul} class="rounded-full" />
+        </div>
+
+        <p class="flex-1">
+          <a href="https://www.linkedin.com/in/paulcampbell-tito/" class="font-bold text-center">Paul Campbell</a><br>
+          <em>Technical Director</em><br>
+          Paul is the co-founder and CEO of Team Tito. Paul presides over the making of <a href="https://ti.to/">Tito</a>, an app for selling tickets online, and <a href="https://vi.to">Vito</a>, an app for building online communities. Paul also created Úll, a series of conferences inspired by Apple.
+        </p>
+      </div>
+    </div>
   </WrapperWithNav>
 </Layout>

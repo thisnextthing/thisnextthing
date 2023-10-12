@@ -8,6 +8,43 @@ import mountains from "../images/2024/mountains.webp"
 ---
 <Layout title="About">
   <WrapperWithNav>
-    <p>About This Next Thing</p>
+    <div class="space-y-4">
+      <h2>Questions</h2>
+
+      <dl>
+        <dt>Are families welcome?</dt>
+        <dd>Definitely.</dd>
+      
+        <dt>Is this event expensible?</dt>
+        <dd>Yes.</dd>
+
+        <dt>How many folks are you expecting?</dt>
+        <dd>Last year was 150. We're hoping for between 200–300 this time round.</dd>
+
+        <dt>Is Switzerland a safe place to travel to?</dt>
+        <dd>
+          <p>
+            Switzerland is one of the safest places in Europe to travel. We advise usual travel precautions, and <a href="https://wikitravel.org/en/Switzerland#Stay_safe">research</a>, and we advise everyone to take out requisite travel insurance since there is movement involved with the conference.
+          </p>
+
+          <p>
+            Each of the starter cities will have a point person who will be introduced online before the in-person event, and will host each of the warmup events.
+          </p>
+
+          <p>
+            All of the planned travel is in groups, with that point person.
+          </p>
+
+          <p>
+            Once we arrive in Pontresina, everyone will have their own hotel room, and events are organised such that at any point, nobody will be more than a few minutes walk from their room.
+          </p>
+        </dd>
+      </dl>
+    </div>
   </WrapperWithNav>
 </Layout>
+
+<style>
+  dt { @apply text-lg font-medium }
+  dd { margin-bottom: 1rem; @apply space-y-4 }
+</style>
