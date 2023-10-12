@@ -1,0 +1,36 @@
+---
+import NavLink from "../../components/NavLink.astro"
+import { getImage } from "astro:assets"
+import bg from "../../images/2024/paper-bg.jpg"
+const optimizedBackgroundImage = await getImage({ src: bg })
+---
+
+<div class="md:-rotate-1 flex">
+    <div>
+      <nav>
+        <NavLink href="/2024">Home</NavLink>
+        <NavLink href="/2024/about">About</a>
+        <NavLink href="/2024/team">Team</a>
+        <NavLink href="/2024/questions">Questions</a>
+        <NavLink href="/2024/guide">Booking guide</a>
+        <NavLink href="/2024/support">Support us!</a>
+        <NavLink href="/2024/contact">Contact</a>
+
+        <br><br>
+        <a class="text-xs" href="/2023">2023 website</a>
+      </nav>
+    </div>
+    <div class="bg-cover bg-white md:rounded shadow-xl  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-6" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
+
+    <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
+    <div class="mx-auto max-w-3xl py-4 flex flex-col gap-8 min-w-[32rem]">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  nav { @apply mt-4 rounded-tl rounded-bl bg-white overflow-hidden }
+  nav a { @apply block p-2 hover:bg-gray-200 }
+  nav a.current { @apply bg-gray-100 }
+</style>

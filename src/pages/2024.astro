@@ -1,20 +1,14 @@
 ---
 import Layout from '../layouts/2024.astro';
+import WrapperWithNav from '../layouts/2024/WrapperWithNav.astro';
 import { Image } from 'astro:assets';
 
 import ThisNextThing from "../images/2024/this-next-thing.svg"
 import mountains from "../images/2024/mountains.webp"
-
-import { getImage } from "astro:assets"
-import bg from "../images/2024/paper-bg.jpg"
-const optimizedBackgroundImage = await getImage({ src: bg })
 ---
 <Layout title="This Next Thing">
 	<Image src={mountains} alt="" class="md:hidden"/>
-	<div class="bg-cover bg-white md:rounded shadow-xl md:-rotate-1 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-6" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
-
-	<!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
-	<div class="mx-auto max-w-3xl py-4 flex flex-col gap-8">
+	<WrapperWithNav>
 		<div>
 			<Image src={ThisNextThing} alt="This Next Thing" />
 			Creative minds. Meaningful relationships. Magical experiences.
@@ -53,16 +47,5 @@ const optimizedBackgroundImage = await getImage({ src: bg })
 				See <a href="/2023">our 2023 website</a> to read more about the spirit of the event.
 			</p>
 		</div>
-	</div>
-</div>
+	</WrapperWithNav>
 </Layout>
-
-<style>
-	p { @apply mb-4 }
-	h1 { @apply font-bold text-[3rem] }
-	h2 { @apply font-bold text-[1.5rem] mb-2 }
-	h3 { @apply font-medium text-[1.2rem]	}
-	h4 { font-weight: bold }
-
-	aside { @apply w-full md:w-[26rem] border-b md:border-b-0 md:border-r border-white p-8 }
-</style>
