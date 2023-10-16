@@ -36,7 +36,7 @@ const optimizedBackgroundImage = await getImage({ src: bg })
   </head>
   <body class="font-sans bg-cover bg-fixed" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
     <div class="flex h-screen">
-      <div class="mx-auto md:m-auto">
+      <div class="w-full md:w-[inherit] md:m-auto">
         <slot />
       </div>
     </div>
