@@ -3,11 +3,15 @@ import NavLink from "../../components/NavLink.astro"
 import { getImage } from "astro:assets"
 import bg from "../../images/2024/paper-bg.jpg"
 const optimizedBackgroundImage = await getImage({ src: bg })
+import { Icon } from 'astro-icon'
 ---
 
 <div class="md:-rotate-1 flex wrapper-with-nav">
   <div>
-    <nav>
+    <button id="menu" class="fixed right-4 top-4 h-8 w-8" title="Open menu">
+      <Icon pack="mdi" name="hamburger-menu" />
+    </button>
+    <nav id="nav" class="fixed top-4 left-4 hidden md:static md:block">
       <NavLink href="/2024">Home</NavLink>
       <NavLink href="/2024/about">About</a>
       <NavLink href="/2024/testimonials">Testimonials</a>
@@ -24,13 +28,13 @@ const optimizedBackgroundImage = await getImage({ src: bg })
   <div class="bg-cover bg-white md:rounded shadow-xl  mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-6" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
 
   <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
-  <div class="mx-auto max-w-3xl py-4 w-[32rem] space-y-4">
+  <div class="mx-auto max-w-3xl py-4 md:w-[32rem] space-y-4">
     <slot />
   </div>
 </div>
 
 <style>
-  nav { @apply mt-4 rounded-tl rounded-bl bg-white overflow-hidden }
+  nav { @apply mt-4 rounded md:rounded-r-none bg-white overflow-hidden }
   nav a { @apply block p-2 hover:bg-gray-200 }
   nav a.current { @apply bg-gray-100 }
 </style>
@@ -40,3 +44,19 @@ const optimizedBackgroundImage = await getImage({ src: bg })
   .wrapper-with-nav h2 { font-size: 2rem;  }
   .wrapper-with-nav h3 { font-size: 1.5rem; margin-bottom: 0  }
 </style>
+
+<script>
+  const button = document.getElementById("menu")
+  button.addEventListener('click', () => {
+    const nav = document.getElementById("nav")
+    if(nav.classList.contains("hidden"))
+    {
+      nav.classList.remove("hidden")
+    }
+    else
+    {
+      nav.classList.add("hidden")
+    }
+    
+  });
+</script>
