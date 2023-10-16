@@ -1,0 +1,14 @@
+---
+  export interface Props {
+    person: string;
+  }
+
+  const { person } = Astro.props;
+---
+<article>
+  <blockquote class="border-l border-gray-500 border-l-4 px-4 py-2">
+    <slot></slot>
+  </blockquote>
+
+  { person && <strong class="block text-right">{person}</strong> }
+</article>
