@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/2024.astro';
+import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
+import { Image } from 'astro:assets';
+
+import ThisNextThing from "../images/2024/this-next-thing.svg"
+import mountains from "../images/2024/mountains.webp"
+---
+<Layout title="Questions">
+  <WrapperWithNav>
+    <div class="space-y-4">
+      <h2>Questions</h2>
+
+      <dl>
+        <dt>Are families welcome?</dt>
+        <dd>
+          Definitely. The venue was chosen specifically for its excellent childcare, and kids are welcome at all conference activities. We sell specific tickets for plus-ones and kids to be able to join you in Pontresina, which you can <a href="/2024/booking">find here</a>.
+        </dd>
+
+        <dt>How does the plus-one ticket work?</dt>
+        <dd>
+          The plus-one ticket is a full ticket to all event activities for an adult who will be sharing your hotel room. There are no conditions attached: it could be a partner, friend, or whomever you choose. For any children sharing your hotel room, please <a href="/2024/book">purchase kid tickets</a>.
+        </dd>
+      
+        <dt>Is this event expensable?</dt>
+        <dd>
+          <p>Yes. You might even say indispensable.</p>
+
+          <p>While we emphasise meaningful relationships and shared experiences rather than transactional networking, we believe that attending this event can be transformational to your business or career.</p>
+        </dd>
+
+        <dt>How many folks are you expecting?</dt>
+        <dd>Last year was 150. We're hoping for between 200–300 this time round.</dd>
+
+        <dt>Is Switzerland a safe place to travel to?</dt>
+        <dd>
+          <p>
+            Switzerland is one of the safest places in Europe to travel. We advise usual travel precautions, and <a href="https://wikitravel.org/en/Switzerland#Stay_safe">research</a>, and we advise everyone to take out requisite travel insurance since there is movement involved with the event.
+          </p>
+
+          <p>
+            Each attendee will start their experience in one of three starter cities, and each city will have a point person who will be introduced online before the in-person event to host a warmup event.
+          </p>
+
+          <p>
+            All of the planned travel is in groups, with that point person.
+          </p>
+
+          <p>
+            Once we arrive in Pontresina, everyone will have their own hotel room, and events are organised such that at any point, nobody will be more than a few minutes walk from their room.
+          </p>
+        </dd>
+
+        <dt>Have another question that isn’t answered here?</dt>
+        <dd>
+          <a href="/2024/contact">Get in touch</a>, we’re always listening! Additionally, it’s probably a question that others have too, so that’ll help us figure out how to best keep updating this list.
+        </dd>
+      </dl>
+    </div>
+  </WrapperWithNav>
+</Layout>
+
+<style>
+  dt { @apply text-lg font-medium }
+  dd { margin-bottom: 1rem; @apply space-y-4 }
+</style>

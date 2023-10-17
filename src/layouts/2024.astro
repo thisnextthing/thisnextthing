@@ -36,9 +36,13 @@ const optimizedBackgroundImage = await getImage({ src: bg })
   </head>
   <body class="font-sans bg-cover bg-fixed" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
     <div class="flex h-screen">
-      <div class="m-auto">
+      <div class="w-full md:w-[inherit] md:m-auto">
         <slot />
       </div>
     </div>
+
+    <footer class="fixed bottom-0 right-0 bg-white bg-opacity-50 hidden md:block p-1 px-4 text-sm rounded-tl">
+      Photography by <a class="font-medium" href="https://normanposselt.com/">Norman Posselt</a>
+    </footer>
   </body>
 </html>

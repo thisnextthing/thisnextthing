@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/2024.astro';
+import Testimonial from '../../components/2024/Testimonial.astro';
+import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
+import { Image } from 'astro:assets';
+
+import ThisNextThing from "../images/2024/this-next-thing.svg"
+import mountains from "../images/2024/mountains.webp"
+---
+<Layout title="Testimonials">
+  <WrapperWithNav>
+    <h2>Testimonials</h2>
+
+    <p>From some 2023 Attendees, in their own words</p>
+
+    <div class="space-y-12">
+      <Testimonial>
+        The <strong>amazing people and openness of the environment</strong>, building up relationships over days coming and going and the just organic-ness of it all… just doesn't really happen [like this] after school age
+      </Testimonial>
+
+      <Testimonial>
+        Overall, just <strong>a great experience all around</strong>. The format, care, and detail were exceptional. The venue was stunning. The people were wonderful.
+      </Testimonial>
+
+      <Testimonial>[I want a] time machine to <strong>do it all over again</strong></Testimonial>
+
+      <Testimonial>There’s no other scenario I see where that density of people I like and who mean something to me, I'd encounter in a single space. <strong>Experientially: it’s unparalleled</strong>, I probably would have never taken an open-top train through the Alps had it not been for TNT.</Testimonial>
+
+      <Testimonial>[I]t was <strong>one of the best experiences of my life</strong>. It was my first time attending a conference and I don't think anything can beat this one</Testimonial>
+
+      <Testimonial><strong>The comedown afterwards was really hard</strong>, like more so than for other events</Testimonial>
+
+      <Testimonial>Honestly, <strong>it was perfect</strong>.</Testimonial>
+    </div>
+  </WrapperWithNav>
+</Layout>

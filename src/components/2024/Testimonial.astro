@@ -1,0 +1,37 @@
+---
+  export interface Props {
+    person: string;
+  }
+
+  const { person } = Astro.props;
+---
+<article>
+  <blockquote class="px-4 py-2">
+    <slot></slot>
+  </blockquote>
+
+  { person && <strong class="block text-right">{person}</strong> }
+</article>
+
+<style>
+  blockquote {
+    position: relative
+  }
+  blockquote::before {
+    content: "“";
+    color: #ccc;
+    font-size: 3rem;
+    position: absolute;
+    left: -1rem;
+    top: -0.5rem;
+  }
+
+  blockquote::after {
+    content: "”";
+    color: #ccc;
+    font-size: 3rem;
+    position: absolute;
+    right: -1rem;
+    bottom: -2.5rem;
+  }
+</style>

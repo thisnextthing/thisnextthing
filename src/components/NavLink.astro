@@ -1,0 +1,12 @@
+---
+export interface Props {
+  href: string;
+}
+const { href } = Astro.props;
+---
+
+<a class={href === Astro.url.pathname ? "active" : ""} href={href}><slot /></a>
+<style>
+  a { @apply block p-2 hover:bg-gray-200 }
+  a.active { @apply bg-gray-100 }
+</style>
