@@ -5,14 +5,37 @@ import { Image } from 'astro:assets';
 
 import ThisNextThing from "../images/2024/this-next-thing.svg"
 import mountains from "../images/2024/mountains.webp"
+
+import { Icon } from 'astro-icon'
 ---
-<Layout title="About">
+<Layout title="Contact">
   <WrapperWithNav>
     <h2>Contact us</h2>
-    <p>You can contact us on our <a href="https://discord.gg/DsSEgV6gMY" class="font-bold">Discord server</a>.</p>
 
-    <p>
-      Alternatively, you can get in touch via our LinkedIn page, or via email to abby@, eamo@, or paul@ or simply <a href="mailto:info@thisnextthing.com" class="font-bold">info@thisnextthing.com</a>.
-    </p>
+    <dl>
+      <dt>
+        <Icon pack="mdi" name="envelope" />
+        Email
+      </dt>
+      <dd><a href="mailto:info@thisnextthing.com" class="font-bold">info@thisnextthing.com</a></dd>
+
+      <dt>
+        <Icon pack="mdi" name="discord" />
+        Discord
+      </dt>
+      <dd><a href="https://discord.gg/DsSEgV6gMY" class="font-bold">Join our server</a></dd>
+
+      <dt>
+        <Icon pack="mdi" name="linkedin" />
+        LinkedIn
+      </dt>
+      <dd><a href="https://www.linkedin.com/company/this-next-thing" class="font-bold">See our page</a></dd>
+    </dl>
   </WrapperWithNav>
 </Layout>
+
+<style>
+  dd { margin-bottom: 2rem }
+  svg { width: 1rem }
+  dt { display: flex; gap: 0.25rem }
+</style>
