@@ -16,6 +16,7 @@ const optimizedFaviconSVG = await getImage({ src: FaviconSVG })
 import { getImage } from "astro:assets"
 import bg from "../images/2024/mountains.webp"
 const optimizedBackgroundImage = await getImage({ src: bg })
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!DOCTYPE html>
@@ -33,6 +34,7 @@ const optimizedBackgroundImage = await getImage({ src: bg })
     <meta name="description" content="Creative minds. Meaningful relationships. Magical experiences.">
 
     <script defer data-domain="thisnextthing.com" src="https://plausible.io/js/script.js"></script>
+    <ViewTransitions />
   </head>
   <body class="font-sans bg-cover bg-fixed" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
     <div class="flex h-screen">
