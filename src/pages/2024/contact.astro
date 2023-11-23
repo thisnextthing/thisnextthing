@@ -3,13 +3,18 @@ import Layout from '../../layouts/2024.astro';
 import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
 import { Image } from 'astro:assets';
 
-import ThisNextThing from "../images/2024/this-next-thing.svg"
+import ThisNextThing from "../../images/2024/this-next-thing.svg"
 import mountains from "../images/2024/mountains.webp"
 
 import { Icon } from 'astro-icon'
 ---
 <Layout title="Contact">
   <WrapperWithNav>
+    <div>
+      <Image src={ThisNextThing} alt="This Next Thing" />
+      Creative minds. Meaningful relationships. Magical experiences.
+      <h4 class="font-bold">16th to 20th June 2024</h4>
+    </div>
     <h2>Contact us</h2>
 
     <dl>

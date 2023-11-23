@@ -4,11 +4,16 @@ import Testimonial from '../../components/2024/Testimonial.astro';
 import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
 import { Image } from 'astro:assets';
 
-import ThisNextThing from "../images/2024/this-next-thing.svg"
+import ThisNextThing from "../../images/2024/this-next-thing.svg"
 import mountains from "../images/2024/mountains.webp"
 ---
 <Layout title="Testimonials">
   <WrapperWithNav>
+    <div>
+        <Image src={ThisNextThing} alt="This Next Thing" />
+        Creative minds. Meaningful relationships. Magical experiences.
+        <h4 class="font-bold">16th to 20th June 2024</h4>
+    </div>    
     <h2>Testimonials</h2>
 
     <p>From some 2023 Attendees, in their own words</p>

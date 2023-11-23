@@ -2,13 +2,18 @@
 import Layout from '../../layouts/2024.astro';
 import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
 import { Image } from 'astro:assets';
-
+import ThisNextThing from "../../images/2024/this-next-thing.svg"
 import Paul from "../../images/2024/paul.jpg"
 import Eamo from "../../images/2024/eamo.jpg"
 import Abby from "../../images/2024/abby.jpg"
 ---
 <Layout title="About">
   <WrapperWithNav>
+    <div>
+        <Image src={ThisNextThing} alt="This Next Thing" />
+        Creative minds. Meaningful relationships. Magical experiences.
+        <h4 class="font-bold">16th to 20th June 2024</h4>
+    </div>
     <h2>The team</h2>
     <div class="flex flex-col items-start justify-center gap-4 md:gap-8">
       <p>
