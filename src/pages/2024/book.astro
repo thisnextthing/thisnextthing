@@ -3,12 +3,18 @@ import Layout from '../../layouts/2024.astro';
 import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
 import { Image } from 'astro:assets';
 
-import ThisNextThing from "../images/2024/this-next-thing.svg"
+import ThisNextThing from "../../images/2024/this-next-thing.svg"
 import mountains from "../images/2024/mountains.webp"
 ---
 <Layout title="Book">
   <WrapperWithNav>
+    <div>
+        <Image src={ThisNextThing} alt="This Next Thing" />
+        Creative minds. Meaningful relationships. Magical experiences.
+        <h4 class="font-bold">Sunday 16th June to Thursday 20th June 2024</h4>
+    </div>
     <h2 class="font-medium text-sm p-1">Book tickets</h2>
+    <h4>Early access tickets cover Sunday evening warm-up, travel on Monday, and room & board at the Grand Hotel Kronenhof on the nights of Mon 17th and Tue 18th June. There will be an optional activities day on Wed 19th June, tickets for which will be released in 2024.</h4>
     <tito-widget discount-code="EARLY" event="this-next-thing/2024"></tito-widget>
   </WrapperWithNav>
 </Layout>

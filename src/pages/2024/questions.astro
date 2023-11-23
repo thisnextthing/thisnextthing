@@ -3,15 +3,28 @@ import Layout from '../../layouts/2024.astro';
 import WrapperWithNav from '../../layouts/2024/WrapperWithNav.astro';
 import { Image } from 'astro:assets';
 
-import ThisNextThing from "../images/2024/this-next-thing.svg"
+import ThisNextThing from "../../images/2024/this-next-thing.svg"
 import mountains from "../images/2024/mountains.webp"
 ---
 <Layout title="Questions">
   <WrapperWithNav>
     <div class="space-y-4">
+      <div>
+        <Image src={ThisNextThing} alt="This Next Thing" />
+        Creative minds. Meaningful relationships. Magical experiences.
+        <h4 class="font-bold">16th to 20th June 2024</h4>
+      </div>
       <h2>Questions</h2>
 
       <dl>
+
+        <dt>When is This Next Thing?</dt>
+        <dd>
+          The event runs from the evening of Sunday 16th June, to the morning of Thursday 20th June 2024. 
+          Sunday evening is a warm-up gathering in smaller groups, in one of three locaations: Innsbruck, Milan or Zurich. On Monday you'll be brought to the alpine village of Pontresina. The main event runs from Monday afternoon until the morning of Wednesday, 19th June. An optional day and night of activities is planned for that day, with those opting to stay, departng on the morning of Thursday, 20th June. 
+        </dd>
+
+
         <dt>Are families welcome?</dt>
         <dd>
           Definitely. The venue was chosen specifically for its excellent childcare, and kids are welcome at all conference activities. We sell specific tickets for plus-ones and kids to be able to join you in Pontresina, which you can <a href="/2024/booking">find here</a>.
