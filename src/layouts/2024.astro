@@ -37,8 +37,8 @@ import { ViewTransitions } from 'astro:transitions';
     <ViewTransitions />
   </head>
   <body class="font-sans bg-cover bg-fixed" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
-    <div class="flex h-screen">
-      <div class="w-full md:w-[inherit] md:m-auto">
+    <div class="flex h-screen md:p-4">
+      <div class="w-full md:max-w-5xl md:m-auto">
         <slot />
       </div>
     </div>
