@@ -52,7 +52,7 @@ import { Icon } from 'astro-icon'
   .wrapper-with-nav h2 { font-size: 2rem;  }
   .wrapper-with-nav h3 { font-size: 1.5rem; margin-bottom: 0  }
   .prose { max-width: 100% !important; }
-  .tito-register-interest-form { display: flex; gap: 1rem; }
+  .tito-register-interest-form { @apply flex gap-4 flex-col md:flex-row }
   .tito-register-interest-form button { border: 1px solid #ccc; padding-left: 1rem; padding-right: 1rem; border-radius: 0.25rem}
   .tito-register-interest-form button:hover { background: rgba(0, 0, 0, 0.25)}
   .tito-register-interest-form input { border-radius: 0.25rem}
