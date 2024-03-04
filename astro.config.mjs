@@ -20,6 +20,6 @@ export default defineConfig({
     }),
   ],
   redirects: {
-    "/2024/book": "https://ti.to/this-next-thing/2024",
+    "/2024": "https://2024.thisnextthing.com",
   },
 });
