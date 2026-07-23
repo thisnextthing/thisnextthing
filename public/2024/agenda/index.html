@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Agenda</title>
+    <meta name="description" content="This Next Thing 2024 took place at the Grand Hotel Kronenhof, Pontresina, Switzerland, June 16–19, 2024.">
+    <meta property="og:title" content="Agenda">
+    <meta property="og:image" content="https://thisnextthing.com/2024/images/og-c8ea9400.png">
+    <meta property="og:description" content="This Next Thing 2024 took place at the Grand Hotel Kronenhof, Pontresina, Switzerland, June 16–19, 2024.">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/1e319a6cb9b08348bad637f786730dbd3571f4a0d267fc3a8cae02b8699f5285-48.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/49612580c523a73c7bdec361d080955eb62dae6a0f0e8ceeb94e14603ef0dfe4-52.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/624f9f0e88bdf868bf3516a6d8dad141768aea1cffdb89d963d12001814c0191-47.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/70c23328d6ceb93e06e14af8e8ef9c65bcf4523a1578ef3e7b7efb6029083df1-45.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/5ea9b021cceb385fc8f7e664763fd0b3aba9a15574fc080f0d169eb12f87f407-49.css">
+    <script src="/2024/assets/javascripts/444c598a3e2320910d748ecbe15fbf56fec5eb5957648500f9d569ee553fd0ea-50.js"></script><script src="/2024/assets/javascripts/a54494ff5f1b1270af6b1d1d96083a40bb8b50e8ed0697008f149236409c09d3-51.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/v4-shims.min.css">
+    <script defer data-domain="thisnextthing.com" src="https://plausible.io/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.prod.min.js"></script>
+    <script type="module">
+      const {
+      	computed,
+      	createApp,
+      	ref
+      } = Vue
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="mountains"></div>
+    <div class="actions">
+      <div class="cta">
+        <a href="/2024/about">
+          About
+        </a>
+        <a href="/2024/why-attend">
+          Why Attend?
+        </a>
+        <a href="/2024/speakers" data-turbo="false">
+          Speakers
+        </a>
+        <a href="/2024/agenda">
+          Agenda
+        </a>
+      </div>
+      <div class="menu">
+        <div class="dropdown" data-controller="dropdown" data-placement="left">
+          <button class="padded" data-action="click-&gt;dropdown#toggle dropdown:click:outside-&gt;dropdown#close mouseover-&gt;tito-button#hoverEnter mouseout-&gt;tito-button#hoverLeave" data-dropdown-target="button">
+            <i class="fa fa-solid fa-bars"></i>
+          </button>
+          <menu data-dropdown-target="menu" class="">
+            <li>
+              <a href="/2024/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/2024/why-attend">
+                Why attend?
+              </a>
+              <a href="/2024/agenda" data-turbo="false">
+                Agenda
+              </a>
+              <a href="/2024/speakers">
+                Speakers
+              </a>
+              <a href="/2024/learn-more">
+                I want to know more!
+              </a>
+              <a href="/2024/about">
+                About
+              </a>
+              <a href="/2024/posts">
+                Latest updates
+              </a>
+              <a href="/2024/team">
+                The team
+              </a>
+              <a href="/2024/questions">
+                Questions
+              </a>
+              <a href="/2024/support">
+                Support us
+              </a>
+              <a href="/2024/contact">
+                Contact us
+              </a>
+              <a href="/2024/code-of-conduct">
+                Code of conduct
+              </a>
+              <a href="/2024/policies">
+                Policies
+              </a>
+              <a href="/2023">
+                2023 website
+                <i class="fa fa-external-link"></i>
+              </a>
+            </li>
+          </menu>
+        </div>
+      </div>
+    </div>
+    <img id="giant-logo" src="/2024/images/logo-color-8a435376.svg">
+    <header>
+      <a href="/2024/">
+        <img src="/2024/images/logo-wordmark-c68e34de.svg">
+      </a>
+    </header>
+    <div id="app" v-cloak>
+      <main>
+        <article>
+          <h1>Sun June 16th–Thu June 20th</h1>
+          <div class="buttons">
+            <button @click="day='sunday'" :class="{'active': day === 'sunday'}">Sun</button>
+            <button @click="day='monday'" :class="{'active': day === 'monday'}">Mon</button>
+            <button @click="day='tuesday'" :class="{'active': day === 'tuesday'}">Tue</button>
+            <button @click="day='wednesday'" :class="{'active': day === 'wednesday'}">Wed</button>
+            <button @click="day='thursday'" :class="{'active': day === 'thursday'}">Thu</button>
+          </div>
+          <ul v-if="day === 'sunday'">
+            <h2>Sunday 16th June: Innsbruck, Milan, or Zurich</h2>
+            <li class="agenda-item">
+              <time datetime="2024-06-16 15:00">Approx 3pm</time>
+              Optional group activity in your chosen starter city.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-16 19:00">Approx 7pm</time>
+              Smaller group dinners.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-16 22:00">Approx 10pm</time>
+              Larger after-dinner informal meetup.
+            </li>
+          </ul>
+          <ul v-if="day === 'monday'">
+            <h2>Monday 17th June: Pontresina</h2>
+            <li class="agenda-item">
+              <time datetime="2024-06-17 10:00">Approx 10am</time>
+              Depart Innsbruck, Milan, or Zurich for Pontresina, Switzerland.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-17 13:00">Approx 1pm</time>
+              Arrive in Pontresina.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-17 18:30">Approx 6:30pm</time>
+              Small group dinners.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-17 20:00">8pm</time>
+              Welcome reception.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-17 22:00">10pm</time>
+              After-hour activities.
+            </li>
+          </ul>
+          <ul v-if="day === 'tuesday'">
+            <h2>Tuesday 18th June: Pontresina</h2>
+            <li class="agenda-item">
+              <time datetime="2024-06-18 10:00">10am</time>
+              Keynote sessions.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-18 10:00">12pm</time>
+              Lunch.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-18 14:00">2pm</time>
+              Workshops, breakouts, roundtables.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-18 19:00">7pm</time>
+              Gala dinner.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-18 21:00">9pm</time>
+              Post-dinner group activity.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-18 22:30">10:30pm</time>
+              After-hour activities.
+            </li>
+          </ul>
+          <ul v-if="day === 'wednesday'">
+            <h2>Wednesday 19th June (optional)</h2>
+            <li class="agenda-item">
+              <time datetime="2024-06-19 14:00">2pm</time>
+              Group activities.
+            </li>
+            <li class="agenda-item">
+              <time datetime="2024-06-19 14:00">7pm</time>
+              Group dinner.
+            </li>
+          </ul>
+          <ul v-if="day === 'thursday'">
+            <h2>Thursday 20th June (optional)</h2>
+            <li class="agenda-item">
+              Thursday is a wind-down day, where you are free to set your own agenda and enjoy the amenities of the hotel and the surroundings.
+            </li>
+          </ul>
+        </article>
+      </main>
+    </div>
+    <style>
+      h1 {
+        margin-bottom: 1rem;
+      }
+      h2 { font-weight: 400; }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+      }
+      .agenda-item {
+        list-style-type: none;
+        border: 1px solid gray;
+        background: white;
+        border-radius: 0.25rem;
+        padding: 1rem;
+      }
+      .agenda-item time {
+        display: block;
+        color: #475569;
+        text-transform: uppercase;
+      }
+      .buttons {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .buttons button {
+        border: 1px solid gray;
+        background: none;
+        cursor: pointer;
+        border-radius: 0.25rem;
+      }
+      .buttons button:active, .buttons button.active, .buttons button:hover {
+        background-color: #0ea5e9;
+        color: white;
+      }
+      main {
+       display: flex;
+       padding: 1rem;
+      }
+
+      article {
+        width: 100%;
+        max-width: 80ch;
+        margin: auto;
+      }
+    </style>
+    <script type="module">
+      const { computed, createApp, ref } = Vue
+      const app = {
+        setup(){
+          const day = ref('sunday')
+          return {
+            day
+          }
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function(){
+        createApp(app).mount('#app')
+      })
+    </script>
+    <style>
+      h2 { margin-top: 1rem }
+    </style>
+  </body>
+</html>

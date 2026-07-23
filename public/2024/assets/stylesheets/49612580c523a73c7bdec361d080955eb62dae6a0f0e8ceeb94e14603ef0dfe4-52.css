@@ -1,0 +1,123 @@
+.btn {
+  --border-radius: 4px;
+  --border-color: var(--light-gray);
+  --button-padding: 0.25rem 0.75rem;
+
+  background-color: inherit;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius);
+  color: var(--gray-900);
+  cursor: pointer;
+  display: inline-block;
+  min-height: 2.125rem;
+  min-width: 2.125rem;
+  padding: var(--button-padding);
+  text-decoration: none;
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--light-blue);
+  }
+
+  &.disabled {
+    background-color: var(--gray-100);
+    color: var(--gray-500);
+    cursor: default;
+  }
+}
+
+.btn.btn-sm {
+  font-size: 0.75rem;
+}
+
+.btn.btn-success {
+  border-color: var(--success-color);
+  color: var(--success-text);
+  background-color: var(--success-color);
+  &:hover {
+    background-color: var(--success-color-hover);
+  }
+}
+
+.btn.btn-danger {
+  border-color: var(--danger-color);
+  color: var(--danger-text);
+  background-color: var(--danger-color);
+  &:hover {
+    background-color: var(--danger-color-hover);
+  }
+}
+
+.btn-close {
+  align-items: center;
+  border-radius: 4px;
+  color: var(--gray-900);
+  display: flex;
+  justify-content: center;
+  min-height: 2.125rem;
+  min-width: 2.125rem;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    background-color: var(--light-blue);
+  }
+}
+
+.btn-not-clickable {
+  &:hover {
+    background-color: #fff;
+    cursor: default;
+  }
+}
+
+.btn.with-padding-x {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn-group {
+  border-radius: 4px;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn {
+  background-color: var(--gray-100);
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  flex: 1 1 auto;
+  &.active {
+    background-color: #fff;
+    box-shadow: none;
+  }
+}
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn-group:not(:first-child),
+.btn-group > :not(.btn-check:first-child) + .btn {
+  margin-left: -1px;
+}
+
+.btn-group > .btn:nth-child(n + 3),
+.btn-group > :not(.btn-check) + .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn.btn-block {
+  display: block;
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>I want to know more!</title>
+    <meta name="description" content="This Next Thing 2024 took place at the Grand Hotel Kronenhof, Pontresina, Switzerland, June 16–19, 2024.">
+    <meta property="og:title" content="I want to know more!">
+    <meta property="og:image" content="https://thisnextthing.com/2024/images/og-c8ea9400.png">
+    <meta property="og:description" content="This Next Thing 2024 took place at the Grand Hotel Kronenhof, Pontresina, Switzerland, June 16–19, 2024.">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/1e319a6cb9b08348bad637f786730dbd3571f4a0d267fc3a8cae02b8699f5285-48.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/49612580c523a73c7bdec361d080955eb62dae6a0f0e8ceeb94e14603ef0dfe4-52.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/624f9f0e88bdf868bf3516a6d8dad141768aea1cffdb89d963d12001814c0191-47.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/70c23328d6ceb93e06e14af8e8ef9c65bcf4523a1578ef3e7b7efb6029083df1-45.css">
+    <link rel="stylesheet" href="/2024/assets/stylesheets/5ea9b021cceb385fc8f7e664763fd0b3aba9a15574fc080f0d169eb12f87f407-49.css">
+    <script src="/2024/assets/javascripts/444c598a3e2320910d748ecbe15fbf56fec5eb5957648500f9d569ee553fd0ea-50.js"></script><script src="/2024/assets/javascripts/a54494ff5f1b1270af6b1d1d96083a40bb8b50e8ed0697008f149236409c09d3-51.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/v4-shims.min.css">
+    <script defer data-domain="thisnextthing.com" src="https://plausible.io/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.prod.min.js"></script>
+    <script type="module">
+      const {
+      	computed,
+      	createApp,
+      	ref
+      } = Vue
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="mountains"></div>
+    <div class="actions">
+      <div class="cta">
+        <a href="/2024/about">
+          About
+        </a>
+        <a href="/2024/why-attend">
+          Why Attend?
+        </a>
+        <a href="/2024/speakers" data-turbo="false">
+          Speakers
+        </a>
+        <a href="/2024/agenda">
+          Agenda
+        </a>
+      </div>
+      <div class="menu">
+        <div class="dropdown" data-controller="dropdown" data-placement="left">
+          <button class="padded" data-action="click-&gt;dropdown#toggle dropdown:click:outside-&gt;dropdown#close mouseover-&gt;tito-button#hoverEnter mouseout-&gt;tito-button#hoverLeave" data-dropdown-target="button">
+            <i class="fa fa-solid fa-bars"></i>
+          </button>
+          <menu data-dropdown-target="menu" class="">
+            <li>
+              <a href="/2024/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/2024/why-attend">
+                Why attend?
+              </a>
+              <a href="/2024/agenda" data-turbo="false">
+                Agenda
+              </a>
+              <a href="/2024/speakers">
+                Speakers
+              </a>
+              <a href="/2024/learn-more">
+                I want to know more!
+              </a>
+              <a href="/2024/about">
+                About
+              </a>
+              <a href="/2024/posts">
+                Latest updates
+              </a>
+              <a href="/2024/team">
+                The team
+              </a>
+              <a href="/2024/questions">
+                Questions
+              </a>
+              <a href="/2024/support">
+                Support us
+              </a>
+              <a href="/2024/contact">
+                Contact us
+              </a>
+              <a href="/2024/code-of-conduct">
+                Code of conduct
+              </a>
+              <a href="/2024/policies">
+                Policies
+              </a>
+              <a href="/2023">
+                2023 website
+                <i class="fa fa-external-link"></i>
+              </a>
+            </li>
+          </menu>
+        </div>
+      </div>
+    </div>
+    <img id="giant-logo" src="/2024/images/logo-color-8a435376.svg">
+    <header>
+      <a href="/2024/">
+        <img src="/2024/images/logo-wordmark-c68e34de.svg">
+      </a>
+    </header>
+    <style>
+      article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        font-size: 1.5rem;
+      }
+      @media(min-width: 640px){
+        article {
+          font-size: 2rem;
+          height: 100vh;
+        }
+      }
+      article main {
+        max-width: 80ch;
+        width: 80ch;
+      }
+      .red {
+        background-color: #ff4351;
+        color: #f8fafc;
+      }
+      .green {
+        background-color: #97e038;
+      }
+      .blue {
+        background-color: #29cfff;
+        color: #333;
+      }
+      .testimonial {
+        position: relative;
+      }
+      .testimonial img {
+        width: 100%;
+      }
+      .testimonial blockquote {
+        background: black;
+        color: white;
+        padding: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        position: relative;
+      }
+
+      @media(min-width: 640px){
+        .testimonial blockquote {
+          position: absolute;
+          bottom: 2rem;
+          left: 2rem;
+          color: white;
+          border-radius: 1rem;
+          background: rgba(0,0,0,0.5);
+          font-size: 1.5rem;
+          margin-right: 2rem;
+        }
+      }
+
+      .testimonial blockquote:before {
+        content: "“";
+        position: absolute;
+        font-size: 4rem;
+        top: -0.5rem;
+        left: 0.5rem;
+      }
+
+      .testimonial blockquote:after {
+        content: "”";
+        position: absolute;
+        font-size: 4rem;
+        bottom: -2rem;
+        right: 0.5rem;
+      }
+    </style>
+    <div class="scrolly">
+      <i class="fa fa-caret-down"></i></div>
+    <style>
+      .scrolly { position: absolute; bottom: 0; left:0; right:0; padding: 1rem; display: flex; justify-content: center; font-size: 2rem;}
+    </style>
+    <script>
+      document.addEventListener("scroll", function(){
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+        const scrolly = document.querySelector(".scrolly")
+        if(scrollTop === 0)
+      {
+        scrolly.style.display = "flex"
+      }
+      else
+      {
+        scrolly.style.display = "none"
+      }
+
+      })
+    </script>
+    <article class="blue">
+      <main>
+        <h2>
+          This Next Thing was divided into three parts:
+          <br>
+          Warmup, main-event, and wind-down.
+        </h2>
+        <p>
+          Guests chose the city they started in:<br>
+          Milan, Zürich, or Innsbruck.
+        </p>
+      </main>
+    </article>
+    <div class="testimonial">
+      <blockquote>It was one of the best experiences of my life. It was my first time attending a conference and I don't think anything can beat this one.</blockquote>
+      <img src="/2024/images/img-bbb7769a.jpg">
+    </div>
+    <article class="red">
+      <main>
+        <h2>
+          The warmup also comprised three parts:<br>
+          a group activity, a meal, and a journey together.
+        </h2>
+        <p>
+          The next day, the three groups converged in the mountain town of Pontresina in the Swiss Alps.
+        </p>
+      </main>
+    </article>
+    <div class="testimonial">
+      <blockquote>The comedown afterwards was really hard, like more so than for other events</blockquote>
+      <img src="/2024/images/img-7a17555c.jpg">
+    </div>
+    <article class="green">
+      <main>
+        <h2>
+          The main themes were:
+          magic, creativity, and meaning.
+        </h2>
+        <p>
+          How do we use our creativity to create magical experiences that enrich people’s lives?
+        </p>
+        <p>
+          The emphasis was on story-telling.
+        </p>
+      </main>
+    </article>
+    <div class="testimonial">
+      <blockquote>Overall, just a great experience. The format, care, and detail were exceptional. The venue was stunning. The people were wonderful.</blockquote>
+      <img src="/2024/images/img-17a6cbd9.jpg">
+    </div>
+    <article class="blue">
+      <main>
+        <h2>
+          The main event itself also had three parts:<br>
+          Stories, explorations, and a gala banquet.
+        </h2>
+      </main>
+    </article>
+    <div class="testimonial">
+      <blockquote>I want a time machine to do it all over again</blockquote>
+      <img src="/2024/images/img-3a2a0493.jpg">
+    </div>
+    <article class="red">
+      <main>
+        <h2>
+          There were three headline story-tellers.
+        </h2>
+        <p>
+          Each told their own story, but also sponsored a
+          nominated <strong>reciprocal</strong> to tell stories about similar themes from <em>a different perspective</em>.
+        </p>
+      </main>
+    </article>
+    <div class="testimonial">
+      <blockquote>The amazing people and openness of the environment, building up relationships over days coming and going and the just organic-ness of it all… just doesn't really happen [like this] after school age</blockquote>
+      <img src="/2024/images/img-80ddf295.jpg">
+    </div>
+    <article class="green">
+      <main>
+        <h2>
+          Talks were followed by a day of exploration.
+        </h2>
+        <p>
+          A variety of smaller events took place simultaneously around the venue.
+          These were workshops, group-discussions, round-tables, meditations,
+          an escape-room. Activities designed to help you to learn, to think, and to interact.
+        </p>
+      </main>
+    </article>
+    <div class="testimonial">
+      <blockquote>Experientially: it’s unparalleled, I probably would have never taken an open-top train through the Alps had it not been for TNT.</blockquote>
+      <img src="/2024/images/img-0c867881.jpg">
+    </div>
+    <article class="blue">
+      <main>
+        <h2>
+          Exploration was followed by a meal
+        </h2>
+        <p>
+          A shared banquet, coming together as a group to share what we’ve learned.
+        </p>
+        <p>
+          And of course, after dinner, one more thing...but to share that would be telling.
+        </p>
+      </main>
+    </article>
+    <div class="testimonial">
+      <blockquote>Honestly, it was perfect.</blockquote>
+      <img src="/2024/images/img-f612a8c4.jpg">
+    </div>
+  </body>
+</html>
