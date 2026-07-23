@@ -8,4 +8,10 @@ Using [Astro]() and [Vue.js]() to build a modern, performant website.
 
 ## Deployment
 
-`main` auto-deploys to [thisnextthing.com](thisnextthing.com) via Netlify, and PRs create deploy previews automatically.
+The site is served by GitHub Pages from the `gh-pages` branch. Deploys are built locally and shipped with:
+
+```
+npm run deploy
+```
+
+which runs `astro build` and pushes `dist/` to `gh-pages`. The custom domain comes from `public/CNAME`.
