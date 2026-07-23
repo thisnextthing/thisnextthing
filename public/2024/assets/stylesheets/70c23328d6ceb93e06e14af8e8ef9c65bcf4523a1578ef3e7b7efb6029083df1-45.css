@@ -1,0 +1,216 @@
+body, html { font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+font-weight: normal; }
+  header { max-width: 20rem; padding: 2rem; }
+  .btn {
+    color: white;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .btn.btn-success {
+    background-color: #16a34a;
+    border-color: #15803d;
+    border: none !important;
+  }
+  .btn:hover {
+    background: #333;
+  }
+  .btn-lg {
+    font-size: 1.25rem
+  }
+  .actions .cta {
+    display: none;
+  }
+    .actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      position: fixed;
+      z-index: 9999;
+    }
+  @media (min-width: 640px) {
+    .actions .cta {
+      display: block;
+    }
+    .actions .cta a {
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .actions .cta a:hover {
+      margin-left: 1rem;
+      text-decoration: underline;
+    }
+  }
+  .menu {
+    font-size: 1.5rem;
+  }
+  #mountains {
+    background: url(/2024/images/mountains-blue-horizontal-4bdea443.jpg) no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+  }
+  .container {
+    display: flex;
+  }
+  .dropdown menu {
+    font-size: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container {
+      margin: 4rem; 
+    }
+  }
+  .container.index {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .page, .index article {
+    background-color: white;
+    padding: 2rem;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .page h2 {
+    font-size: 2rem;
+  }
+  @media (min-width: 640px) {
+    .page, .index article {
+      width: 80ch;
+      border-radius: 1rem;
+    }
+  }
+  h2 { margin-bottom: 0.5rem }
+  .page p {
+    margin-bottom: 1rem;
+  }
+  .metadata {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  article a {
+    text-decoration: none;
+  }
+  article a:hover {
+    color: #29cfff;
+  }
+  .metadata a img {
+    width: 1rem;
+    height: 1rem;
+  }
+  .metadata a span {
+    display: inline-flex;
+    gap: 1rem;
+  }
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .carousel img {
+    flex: 1;
+    object-fit: cover;
+    max-width: 33.33333333%;
+  }
+  dt {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  #giant-logo {
+    position: fixed;
+    width: 25rem;
+    bottom: -10rem;
+    right: 2rem;
+    z-index: -1;
+    animation:spin 200s linear infinite;
+    opacity: 0.2;
+  }
+  @media(min-width: 640px){
+    #giant-logo {
+      opacity: 0.9;
+    }
+  }
+  @keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+article a {
+  color: #1d4ed8 !important;
+  font-weight: 500;
+}
+article a:hover {
+  color: #3b82f6 !important;
+  font-weight: 500;
+}
+.quantities * + * {
+  margin-bottom: 1rem;
+}
+.menu-cta a {
+  border-radius: 0 !important;
+}
+.hero a {
+  margin-top: 2rem;
+}
+@media(min-width: 640px){
+  .mobile-only {
+    display: none !important;
+  }
+}
+h2 {
+  margin-bottom: 0.5rem
+}
+
+.welcome .btn {
+  background: black;
+  color: white;
+}
+
+.welcome .btn:hover {
+  background: var(--gray-800);
+}
+
+.welcome details summary {
+  cursor: pointer;
+}
+
+.vito-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vito-form label {
+  min-width: 4rem;
+}
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+.inline-pic {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inline-pic-alt {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.clear {
+  clear: both;
+}

@@ -1,0 +1,8 @@
+# Redirect the retired Diva-hosted subdomain to the archived copy of the site.
+# Requires 2024.thisnextthing.com to be added as a domain alias on this
+# Netlify site, with DNS pointed at Netlify.
+[[redirects]]
+  from = "https://2024.thisnextthing.com/*"
+  to = "https://thisnextthing.com/2024/:splat"
+  status = 301
+  force = true
